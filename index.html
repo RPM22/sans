@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+
+<!-- this might not make sense if you aren't using a chromium based browser -->
+<!-- epic plug go follow me on instagram @rpm22_ thx bb
+|/\/    ____     ____    __    _    ____ 
+|S|    / ___|   / __ \  /  \  | |  / ___|
+|A|    \ \_    | |__| | |   \ | |  \ \_  
+|N|     \_ \   |  __  | | |\ \| |   \_ \
+|S|    ___\ \  | |  | | | | \   |  ___\ \ 
+|U|   |_____/  |_|  |_| |_|  \__/ |_____/
+|N|    
+|D|   𝙐\  𝙉\  𝘿\  𝙀\  𝙍\  𝙏\  𝘼\  𝙇\  𝙀\ 
+|E|   \𝙐  \𝙉  \𝘿  \𝙀  \𝙍  \𝙏  \𝘼  \𝙇  \𝙀
+|R|   
+|T|            -=+POWERED BY+=-
+|A|    _________      _________      ___
+|L|   |RRRRRRRRR\ .  |TTTTTTTTT| .  |III| .
+|E|   |RRRRR̲R̲RRRR\ . |T̲T̲TTTTTT̲T̲| .  |III| .
+|.|   |RRR|..\RRR/ .  ..|TTT| ....  |III| .
+|C|   |RRR|__/RR/ .     |TTT| .     |III| .
+|F|   |RRRRR̲R̲R̲RR\ .     |TTT| .     |III| .
+|\|   |RRR|...\RR\ .    |TTT| .     |III| .
+|/|   |R̲R̲R̲|.   \R̲R̲\ .   |T̲T̲T̲| .     |I̲I̲I̲| .
+|\|    .....     .....   ......      ......
+|/|   
+|\|   𝙈\      𝙀\      𝘿\       𝙄\       𝘼\
+|/|   \𝙈      \𝙀      \𝘿       \𝙄       \𝘼
+|\/\_____________________________________________/\
+also check out www.rtimedia.net and www.rpm22.net -->
+
+<head>
+    <title>sANS uNDERTALE | The ultimate sans-themed, music-making, VHS screen-saver, equalizer-equipped, YouTube-playing sans-GIF conglomeration on the internet. Powered by RTIMedia.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.rti.llc/jslib/cookie/jquery.cookie.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url(css/web.css);
+        @import url(css/css.css);
+
+        #settingsnote {
+            display: none;
+        }
+
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99293624-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99293624-2');
+
+        $(function() {
+            $("#htmlsect").load("changelog.html");
+        });
+
+    </script>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-startup-image" href="launch.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#004646">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sANS uNDERTALE: the ultimate sans-themed, music-making, VHS screen-saver, equalizer-equipped, YouTube-playing sans-GIF conglomeration on the internet. Powered by RTIMedia.">
+    <meta name="keywords" content="Sans,Undertale,sansundertale,sanswebsite,sans2,undertalewebsite,Megalovania,Deltarune,MusicEQ,EQ,equalizer,Audio,Spectrum,VHS,screensaver,piano,keyboard,undertaleost,ost,freeEQ,musicwaveform,waveform,upload,youtubevideo,spotifyplayer,youtubeplayer,youtubetomp3,youtubetomp4,fortnite">
+
+    <style id="animcss">
+        @import url(css/animation1.css);
+
+    </style>
+    <style id="sanscss">
+    </style>
+    <style id="eqcss">
+        @import url(css/eq1.css);
+
+    </style>
+    <style id="keycss">
+        @import url(css/key1.css);
+
+    </style>
+    <style id="songcss">
+    </style>
+    <style id="sourcecss">
+        @import url(css/source1.css);
+
+    </style>
+    <style id="eqmodecss">
+        @import url(css/eqm1.css);
+
+    </style>
+    <style id="skincss"></style>
+</head>
+
+<body>
+
+    <!-- TEST AREA -->
+
+    <div id="testing">
+        <a id="test1">TestingLink 1</a><br><br>
+        <a id="test2">TestingLink 2</a><br><br>
+        <a id="test3">TestingLink 3</a><br><br>
+        <a id="test4">TestingLink 4</a><br><br>
+        <p id="test5">TestingText</p>
+    </div>
+
+    <!-- LOADING DIV -->
+
+    <div id="pageload" class="easepl">
+        <div class="loader"></div>
+        <div id="plsans" class="easepl"></div>
+        <div id="plcont" class="easepl">
+            <div id="plsub">
+                <div id="plprog">
+                    <div id="plbar" class="ease"></div>
+                </div>
+                <h1 id="test">Loading <span id="fart">sansundertale.cf content</span>...</h1>
+            </div>
+        </div>
+        <div id="loadgif2"></div>
+        <div id="rtilogo2"></div>
+    </div>
+
+    <!-- MASTER PLAYER & BG ELEMENTS -->
+
+    <div id="playercontainer">
+        <video id="masterplayer" src="" playsinline loop></video>
+    </div>
+    <audio id="beatsync1" autostart="false">
+        <source src="https://cdn.rti.llc/sans/1.mp3">
+    </audio>
+    <audio id="beatsync2" autostart="false">
+        <source src="https://cdn.rti.llc/sans/2.mp3">
+    </audio>
+    <audio id="beatsync3" autostart="false">
+        <source src="https://cdn.rti.llc/sans/3.mp3">
+    </audio>
+    <audio id="beatsync4" autostart="false">
+        <source src="https://cdn.rti.llc/sans/4.mp3">
+    </audio>
+    <div id="bgbox" class="ease"></div>
+    <div id="canvasbg"></div>
+
+    <!-- AUDIO ELEMENT CONTAINER -->
+
+    <div id="audioelementcontainer">
+        <audio id="sanstalk" class="audiosource" src="https://cdn.rti.llc/sans/d.mp3" autostart="false"></audio>
+        <audio id="sanstalk2" class="audiosource" src="https://cdn.rti.llc/sans.mp3" autostart="false"></audio>
+        <audio id="m1" class="audiosource" src="https://cdn.rti.llc/sans/1.mp3" autostart="false"></audio>
+        <audio id="m11" class="audiosource" src="https://cdn.rti.llc/sans/11.mp3" autostart="false"></audio>
+        <audio id="m12" class="audiosource" src="https://cdn.rti.llc/sans/12.mp3" autostart="false"></audio>
+        <audio id="m13" class="audiosource" src="https://cdn.rti.llc/sans/13.mp3" autostart="false"></audio>
+        <audio id="m2" class="audiosource" src="https://cdn.rti.llc/sans/2.mp3" autostart="false"></audio>
+        <audio id="m3" class="audiosource" src="https://cdn.rti.llc/sans/3.mp3" autostart="false"></audio>
+        <audio id="m4" class="audiosource" src="https://cdn.rti.llc/sans/4.mp3" autostart="false"></audio>
+        <audio id="nc" class="audiosource" src="https://cdn.rti.llc/sans/notes/c.mp3" autostart="false"></audio>
+        <audio id="ndb" class="audiosource" src="https://cdn.rti.llc/sans/notes/db.mp3" autostart="false"></audio>
+        <audio id="nd" class="audiosource" src="https://cdn.rti.llc/sans/notes/d.mp3" autostart="false"></audio>
+        <audio id="neb" class="audiosource" src="https://cdn.rti.llc/sans/notes/eb.mp3" autostart="false"></audio>
+        <audio id="ne" class="audiosource" src="https://cdn.rti.llc/sans/notes/e.mp3" autostart="false"></audio>
+        <audio id="nf" class="audiosource" src="https://cdn.rti.llc/sans/notes/f.mp3" autostart="false"></audio>
+        <audio id="ngb" class="audiosource" src="https://cdn.rti.llc/sans/notes/gb.mp3" autostart="false"></audio>
+        <audio id="ng" class="audiosource" src="https://cdn.rti.llc/sans/notes/g.mp3" autostart="false"></audio>
+        <audio id="nab" class="audiosource" src="https://cdn.rti.llc/sans/notes/ab.mp3" autostart="false"></audio>
+        <audio id="na" class="audiosource" src="https://cdn.rti.llc/sans/notes/a.mp3" autostart="false"></audio>
+        <audio id="nbb" class="audiosource" src="https://cdn.rti.llc/sans/notes/bb.mp3" autostart="false"></audio>
+        <audio id="nb" class="audiosource" src="https://cdn.rti.llc/sans/notes/b.mp3" autostart="false"></audio>
+        <audio id="nc2" class="audiosource" src="https://cdn.rti.llc/sans/notes/c2.mp3" autostart="false"></audio>
+        <audio id="ndb2" class="audiosource" src="https://cdn.rti.llc/sans/notes/db2.mp3" autostart="false"></audio>
+        <audio id="nd2" class="audiosource" src="https://cdn.rti.llc/sans/notes/d2.mp3" autostart="false"></audio>
+        <audio id="neb2" class="audiosource" src="https://cdn.rti.llc/sans/notes/eb2.mp3" autostart="false"></audio>
+        <audio id="ne2" class="audiosource" src="https://cdn.rti.llc/sans/notes/e2.mp3" autostart="false"></audio>
+        <audio id="nf2" class="audiosource" src="https://cdn.rti.llc/sans/notes/f2.mp3" autostart="false"></audio>
+    </div>
+
+    <!-- BEATSYNC PANEL UI -->
+
+    <a id="beatsyncstart" class="exitbutton ease" onmouseover="playSound5();">RTIBeatSync</a>
+    <div id="beatsyncmain" class="nvisible">
+        <div id="beatsynctop">
+            <div id="beatsynclogo"></div>
+            <a id="bsclose" onclick="beatStart()"></a>
+        </div>
+        <div id="beatsyncbpm">
+            <div id="beatsyncbutton"></div>
+            <div id="beatsyncfresh">
+                <div id="bsfresh"></div>
+            </div>
+            <div id="beatsyncinfo">
+                <div id="bsmain">
+                    <h1 id="beatsyncsub">BPM:</h1>
+                    <h1 id="beatsyncb1"><span id="smol">Tap!</span></h1>
+                </div>
+                <div id="nudgediv">
+                    <a id="bsnup" onclick="bsnu()" onmousedown="bsnuloop()" onmouseup="bsnustop()">
+                        <div id="nudgeup" class="ease">&#11165;</div>
+                    </a>
+                    <h1 id="nudgetext">nudge</h1>
+                    <a id="bsndown" onclick="bsnd()" onmousedown="bsndloop()" onmouseup="bsndstop()">
+                        <div id="nudgedown" class="ease">&#11167;</div>
+                    </a>
+                </div>
+                <h1 id="beatsyncsub">CLICKS:</h1>
+                <div id="beatsyncclicks">
+                    <div class="bsc" id="bsc1"></div>
+                    <div class="bsc" id="bsc2"></div>
+                    <div class="bsc" id="bsc3"></div>
+                    <div class="bsc" id="bsc4"></div>
+                    <div class="bsc" id="bsc5"></div>
+                    <div class="bsc" id="bsc6"></div>
+                    <div class="bsc" id="bsc7"></div>
+                    <div class="bsc" id="bsc8"></div>
+                    <div class="bsc" id="bsc9"></div>
+                    <div class="bsc" id="bsc10"></div>
+                    <div class="bsc" id="bsc11"></div>
+                    <div class="bsc" id="bsc12"></div>
+                    <div class="bsc" id="bsc13"></div>
+                    <div class="bsc" id="bsc14"></div>
+                    <div class="bsc" id="bsc15"></div>
+                    <div class="bsc" id="bsc16"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORNER CONTROL PANEL UI -->
+
+    <a id="settingscheck" class="ease hovergroup1" onmouseover="playSound5();"></a>
+    <div id="linkbox" class="ease">
+        <p id="c1" class="stext ease version2">v</p>
+        <a id="c2" class="slink ease" href="about.html" target="_blank">About</a>
+        <a id="c4" class="slink ease" href="https://goo.gl/forms/vQgKXFcr7p3n7ibF2" target="_blank">Submit Feedback</a>
+        <a id="c3" class="slink ease" href="https://www.rtimedia.net/web#sans" target="_blank">Changelog</a>
+    </div>
+    <div id="cpmain" class="ease pin hovergroup1">
+        <div id="cpspace"></div>
+        <div id="cpsub" class="ease">
+            <a id="sansplay" class="cpbutton ease" onmouseover="playSound5();"></a>
+            <a id="sansplay2" class="cpbutton ease" onmouseover="playSound5();"></a>
+            <a id="sanspause" class="cpbutton ease" onmouseover="playSound5();"></a>
+            <a id="sanshide" class="cpbutton ease" onmouseover="playSound5();"></a>
+            <a id="sanshide2" class="cpbutton ease" onmouseover="playSound5();"></a>
+            <a id="sanspin" class="cpbutton ease pin" onmouseover="playSound5();"></a>
+            <a id="sansvol" class="cpbutton ease" onmouseover="playSound5();"></a>
+            <a id="sansadd" class="cpbutton2 ease" onmouseover="playSound5();"></a>
+            <a id="sansclick" class="cpbutton2 ease"></a>
+        </div>
+        <div id="cpcount">
+            <p id="sanscount" class="ease">1</p>
+        </div>
+    </div>
+    <div id="sansvolcont" class="ease">
+        <input class="ease" id="sansvolume" type="range" min="0" max="100" step="1" value="100" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)">
+    </div>
+    <a id="sanshide3" class="ease" onmouseover="playSound5();"></a>
+
+    <div id="maindiv" class="ease">
+        <div id="warning" class="easepl">
+            <a id="wx"></a>
+            <h2 id="text"><b>DOMAIN NOTICE:</b><br>
+                Recently, the sansundertale.cf domain has become unavailable, so we have temporarilly moved to <b>sansundertale.cf</b> until it becomes avalible again.
+            </h2>
+        </div>
+        <div id="loaddiv" class="ease">
+            <h1 id="text">Loading...</h1>
+        </div>
+
+        <a id="toTop" onclick="scrollToTop()" class="ease">Back to top...</a>
+
+        <!-- INIT SPLASH -->
+
+        <div id="initparent">
+            <div id="init" class="ease3">
+                <a id="sanstrigger" onclick="initPage();">
+                    <div id="sansspacer"></div>
+                    <div id="sans" class="ease"></div>
+                </a>
+                <div id="textbox">
+                    <h1 id="text1">sansundertale.cf</h1>
+                    <h2 id="text">~ click the logo to start ~</h2>
+                    <br>
+                    <br>
+                    <h2 id="text">Click the gear to change player is.</h2>
+                    <h2 id="text">Random stuff added almost every day.</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a id="changelogstart" class="exitbutton ease" onmouseover="playSound5();">Changelog</a>
+                </div>
+            </div>
+        </div>
+        <div id="initspacer"></div>
+        <div id="textbox">
+            <br>
+            <br>
+            <br>
+            <div id="htmlsect"></div>
+        </div>
+        <div id="twobar"></div>
+        <div id="cctl"></div>
+        <div id="cctr"></div>
+        <div id="ccbl"></div>
+        <div id="ccbr"></div>
+
+        <!-- EQ & SANS ELEMENTS -->
+        <div id="rtieq"></div>
+        <div id="animationcont" class="ease">
+            <div class="x">
+                <div class="y"></div>
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR ELEMENTS -->
+
+        <div id="barbank">
+            <div id="bar1" class="bar ease"></div>
+            <div id="bar2" class="bar ease"></div>
+            <div id="bar3" class="bar ease"></div>
+            <div id="bar4" class="bar ease"></div>
+        </div>
+        <div id="barbank2">
+            <div id="bar21" class="bar ease"></div>
+            <div id="bar22" class="bar ease"></div>
+            <div id="bar23" class="bar ease"></div>
+            <div id="bar24" class="bar ease"></div>
+            <div id="bar25" class="bar ease"></div>
+            <div id="bar26" class="bar ease"></div>
+            <div id="bar27" class="bar ease"></div>
+            <div id="bar28" class="bar ease"></div>
+            <div id="bar29" class="bar ease"></div>
+            <div id="bar210" class="bar ease"></div>
+        </div>
+        <div id="preload">
+            <div id="pl1"></div>
+            <div id="pl2"></div>
+            <div id="pl3"></div>
+            <div id="pl4"></div>
+            <div id="pl5"></div>
+            <div id="pl6"></div>
+            <div id="pl7"></div>
+            <div id="pl8"></div>
+            <div id="pl9"></div>
+            <div id="pl10"></div>
+            <div id="pl11"></div>
+            <div id="pl12"></div>
+            <div id="pl13"></div>
+            <div id="pl14"></div>
+            <div id="pl15"></div>
+            <div id="pl16"></div>
+        </div>
+        <div id="bargap" class="ease">
+            <div id="bar">
+                <button type="button" class="active" id="soundbutton1" onclick="m1m();"></button>
+                <button type="button" id="soundbutton11" onclick="m11m();"></button>
+                <button type="button" id="soundbutton12" onclick="m12m();"></button>
+                <button type="button" id="soundbutton13" onclick="m13m();"></button>
+                <button type="button" id="soundbutton2" onclick="m2m();"></button>
+                <button type="button" id="soundbutton3" onclick="m3m();"></button>
+                <button type="button" id="soundbutton4" onclick="m4m();"></button>
+            </div>
+            <div id="twobartwo"></div>
+        </div>
+        <div class="audio-player ease">
+            <div class="audio-wrapper" id="audio-container" href="javascript:;">
+            </div>
+            <div class="player-controls scrubber">
+                <span id="seekObjContainer">
+                    <small class="start-time">0:00:00</small>
+                    <progress id="seekObj" class="ease" value="0" max="1"></progress>
+                    <small class="end-time">0:00:00</small>
+                </span>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- SETTINGS ELEMENTS -->
+
+    <div id="settingsdiv" class="ease">
+        <div id="scont">
+            <div id="settingshead" class="ease">
+                <div id="settingsmenu">
+                    <a id="smenuitem" class="smi1 ease smactive">General</a>
+                    <a id="smenuitem" class="smi3 ease">Music</a>
+                    <a id="smenuitem" class="smi2 ease">Animation</a>
+                    <a id="smenuitem" class="smi4 ease">EQ</a>
+                    <a id="smenuitem" class="smi5 ease">Skins</a>
+                    <a id="smenuitem" class="smi6 ease">Info</a>
+                </div>
+            </div>
+            <div id="mobilespacer" class="ease"></div>
+            <div id="scont5" class="active">
+                <h1 id="stitle1">General settings:</h1>
+                <br>
+                <h2 id="stitle3" class="center">Hover Sounds:</h2>
+                <div id="switchbody" class="sb2">
+                    <div class="switchslider ease on" id="hs"></div>
+                    <a id="h1">
+                        <h1 class="soff ease" id="h11">OFF</h1>
+                    </a>
+                    <a id="h2">
+                        <h1 class="son ease" id="h22">ON</h1>
+                    </a>
+                </div>
+                <h2 id="stitle3" class="center">UI color change:</h2>
+                <div id="switchbody" class="sb2">
+                    <div class="switchslider ease on" id="us"></div>
+                    <a id="u1">
+                        <h1 class="soff ease" id="u11">OFF</h1>
+                    </a>
+                    <a id="u2">
+                        <h1 class="son ease" id="u22">ON</h1>
+                    </a>
+                </div>
+                <h2 id="stitle22" class="center">EQ &amp; UI color (HSL):</h2>
+                <div id="color">
+                    <input type="range" min="1" max="360" value="190" id="slider2">
+                </div>
+                <div id="color15">
+                    <input type="range" min="1" max="100" value="99" id="slider25">
+                </div>
+                <div id="color2">
+                    <input type="range" min="1" max="100" value="50" id="slider3">
+                </div>
+                <div id="color3">
+                </div>
+                <h2 id="stitle2" class="center">Change background image:</h2>
+                <div id="filediv">
+                    <button id="upload2" class="ease"><span id="filename2">Select Image File...</span></button>
+                    <input type="file" accept=".png,.jpg,.jpeg,.gif,.bmp" id="filebutton2" />
+                </div><a id="cbl" class="skinlink" onmouseover="playSound5();">reset background</a>
+                <br>
+                <br>
+                <h2 id="stitle3" class="center">AutoClicker interval (ms):</h2>
+                <input type="text" id="autoinput" class="ease" value="100" onkeypress="javascript:return isNumber(event)" />
+                <h2 id="stitle3" class="center">AutoClicker record:</h2>
+                <h2 id="stitle4">1</h2>
+                <br><br><br>
+            </div>
+            <div id="scont0">
+                <h1 id="stitle1">Animation Settings:</h1>
+                <h2 id="stitle2" class="center">Master animation loop speed:</h2>
+                <p class="movertext" id="c5"><span id="rangeval2"></span>s</p>
+                <input type="range" min="1" max="100" value="100" id="slider">
+                <div id="speed">
+                    <h1 id="speedtextl">Normal</h1>
+                    <h1 id="speedtextl">Fast</h1>
+                    <h1 id="speedtextc">Faster</h1>
+                    <h1 id="speedtextr">Very Fast</h1>
+                    <h1 id="speedtextr">Oh No</h1>
+                </div>
+                <div id="speeddemo">
+                    <div id="mover">
+                        <p id="movertext2">wow</p>
+                    </div>
+                </div>
+                <h2 id="stitle2" class="center">Animation keyframe type:</h2>
+                <div id="switchabody" class="sb2">
+                    <div class="switchaslider ease on" id="aas"></div>
+                    <a id="keybutton1">
+                        <h1 class="saoff ease" id="aa11">LINEAR</h1>
+                    </a>
+                    <a id="keybutton2">
+                        <h1 class="saon ease" id="aa22">BEZIER</h1>
+                    </a>
+                </div>
+                <br>
+                <h2 id="stitle2" class="center">Corner Hit probability:</h2>
+                <p class="movertext" id="c6"><span id="rangeval3">0.0000023</span>%</p>
+                <input type="range" min="1" max="5" value="1" id="slider4">
+                <div id="speed">
+                    <h1 id="speedtextl">Normal</h1>
+                    <h1 id="speedtextl">Increased</h1>
+                    <h1 id="speedtextc">Likely</h1>
+                    <h1 id="speedtextl">Very Likely</h1>
+                    <h1 id="speedtextr">PERFECTION</h1>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div id="scont1">
+                <h1 id="stitle1">Music Settings:</h1>
+                <h2 id="stitle2" class="center">Choose an audio source:</h2>
+                <div id="sourcebar">
+                    <button type="button" class="contentbutton ease" id="content1" onmouseover="playSound5();">Our List</button>
+                    <button type="button" class="contentbutton ease" id="content2" onmouseover="playSound5();">File Upload</button>
+                    <button type="button" class="contentbutton ease" id="content3" onmouseover="playSound5();">Spotify</button>
+                    <button type="button" class="contentbutton ease" id="content4" onmouseover="playSound5();">YouTube</button>
+                    <button type="button" class="contentbutton ease" id="content5" onmouseover="playSound5();">None</button>
+                </div>
+                <div id="sourcecontent">
+                    <div id="pcontrol1">
+                        <h2 id="stitle3">Choose from our list:</h2>
+                        <button type="button" class="sansbutton ease" id="sansbutton0" onmouseover="playSound5();">Megalovania</button>
+                        <br>
+                        <!--<button type="button" class="sansbutton ease" id="sansbutton1" onmouseover="playSound5();">Earrape Megalovania</button>
+                        <br>-->
+                        <button type="button" class="sansbutton ease" id="sansbutton6" onmouseover="playSound5();">Megalovania (SSBU Remix)</button>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton2" onmouseover="playSound5();">Sans.</button>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton5" onmouseover="playSound5();">WUBWUB SANS</button>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton3" onmouseover="playSound5();">Song That Might Play When You Fight Sans</button>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton7" onmouseover="playSound5();">Rudebuster</button>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton8" onmouseover="playSound5();">BIG SHOT</button>
+                    </div>
+                    <div id="pcontrol2">
+                        <h2 id="stitle2">Upload a file:</h2>
+                        <div id="filediv">
+                            <button id="upload" class="ease">Select audio or video file</button>
+                            <input type="file" accept=".mp3,.wav,.m4a,.aac,.wma,.ogg,.mp4,.mov,.wmv,.mpeg,.avi,.m4v" id="filebutton" />
+                            <p id="filename" class="ease">File: None selected.</p>
+                            <br>
+                            <br>
+                            <h2 id="stitle2">Video file as EQ Background:</h2>
+                            <div id="switchbody">
+                                <div class="switchslider ease on" id="yvss"></div>
+                                <a id="ytbutton22">
+                                    <h1 class="soff ease" id="yv11">OFF</h1>
+                                </a>
+                                <a id="ytbutton11">
+                                    <h1 class="son ease" id="yv22">ON</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pcontrol3"><br>
+                        <br>
+                        <a target="_blank" href="https://accounts.spotify.com/authorize?client_id=a8173e3ac8a048c899dcda327505e21c&redirect_uri=https:%2F%2Fwww.sansundertale.cf%2Fspotify.html&scope=streaming%20user-read-birthdate%20user-read-private%20user-read-email&response_type=token&state=123&scope=web-playback" type="button" class="sansbutton ease" id="spot1" onmouseover="playSound5();">Login to Spotify</a>
+                        <div class="sansbutton ease" id="spot11">Logged in</div>
+                        <br>
+                        <br>
+                        <div class="ease" id="spotinfo">
+                            <h1 id="spottitle">The Spotify Player has been started.</h1>
+                            <p id="spottitle2">You should now be able to select the sansundertale.cf player in your Spotify Connect menu.</p>
+                            <br>
+                            <div id="spotconnect"></div>
+                        </div>
+                    </div>
+                    <div id="pcontrol4">
+                        <br>
+                        <input type="text" id="ytinput" onClick="this.select();" onChance="initYT();" placeholder="Insert YouTube video URL...">
+                        <button type="button" class="contentbutton ease" id="ytsubmit" onClick="initYT();">Submit</button>
+                        <a class="contentbutton ease" id="ytdownload" href="download.html" target="_blank">Download MP4</a>
+                        <br>
+                        <div id="ytthumb"></div>
+                        <h2 id="stitle2" class="center">YouTube Video as EQ Background:</h2>
+                        <div id="switchbody" class="sb2">
+                            <div class="switchslider ease on" id="yvs"></div>
+                            <a id="ytbutton2">
+                                <h1 class="soff ease" id="yv1">OFF</h1>
+                            </a>
+                            <a id="ytbutton1">
+                                <h1 class="son ease" id="yv2">ON</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="pcontrol5">
+                        <br><br><br><br><br><br>
+                        <h2 id="stitle2" class="center">No music selected.</h2>
+                    </div>
+                </div>
+                <br>
+                <h2 id="stitle2" class="center">Audio/Video Speed:</h2>
+                <p class="movertext" id="c5"><span id="asc2">1.00</span>x</p>
+                <input type="range" min="1" max="200" value="100" id="slideras1">
+                <div id="speed">
+                    <h1 id="speedtextl2">0.1x</h1>
+                    <h1 id="speedtextc2">1.0x</h1>
+                    <h1 id="speedtextr2">5.0x</h1>
+                </div>
+                <br>
+            </div>
+            <div id="scont3">
+                <h1 id="stitle1">EQ Settings:</h1>
+                <div id="epicfortnite">
+                    <div id="ef1">
+                        <h2 id="stitle3" class="center">EQ toggle:</h2>
+                        <div id="switchbody" class="sb2">
+                            <div class="switchslider ease on" id="eqs"></div>
+                            <a id="eqbutton1">
+                                <h1 class="soff ease" id="eq11">OFF</h1>
+                            </a>
+                            <a id="eqbutton2">
+                                <h1 class="son ease" id="eq22">ON</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="ef1">
+                        <h2 id="stitle3" class="center">
+                            <span id="rr">Rainbow</span> EQ:
+                        </h2>
+                        <div id="switchbody" class="sb2">
+                            <div class="switchslider ease off" id="rs"></div>
+                            <a id="r1">
+                                <h1 class="soff ease off" id="r11">OFF</h1>
+                            </a>
+                            <a id="r2">
+                                <h1 class="son ease off" id="r22">ON</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="ef1">
+                        <h2 id="stitle3" class="center"><span id="rrr">3D</span> EQ:</h2>
+                        <div id="switchbody" class="sb2">
+                            <div class="switchslider ease off" id="nintendo3ds"></div>
+                            <a id="nintendo3d1">
+                                <h1 class="soff ease off" id="nintendo3d11">OFF</h1>
+                            </a>
+                            <a id="nintendo3d2">
+                                <h1 class="son ease off" id="nintendo3d22">ON</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h2 id="stitle3" class="center">EQ graphics mode:</h2>
+                <div id="sourcebar">
+                    <button type="button" class="contentbutton ease" id="eqm1" onmouseover="playSound5();">Normal</button>
+                    <button type="button" class="contentbutton ease" id="eqm2" onmouseover="playSound5();">Slot 1</button>
+                    <button type="button" class="contentbutton ease" id="eqm3" onmouseover="playSound5();">Slot 2</button>
+                    <button type="button" class="contentbutton ease" id="eqm4" onmouseover="playSound5();">Custom</button>
+                </div>
+                <div id="sourcecontent" class="sct">
+                    <div id="eqmode1">
+                        <h2 id="stitle2" class="center">Normal EQ selected.</h2>
+                    </div>
+                    <div id="eqmode2">
+                        <h2 id="stitle2" class="center">Coming soon.</h2>
+                    </div>
+                    <div id="eqmode3">
+                        <h2 id="stitle2" class="center">Coming soon.</h2>
+                    </div>
+                    <div id="eqmode4">
+                        <h2 id="stitle2" class="center">EQ Bar count:</h2>
+                        <p class="movertext" id="c5"><span id="rangevaleq1">100</span> bars</p>
+                        <input type="range" min="0" max="500" value="100" id="slidereq1">
+                        <div id="speed">
+                            <h1 id="speedtextl2">0</h1>
+                            <h1 id="speedtextr2">1000</h1>
+                        </div>
+                        <h2 id="stitle2" class="center">EQ Bar width:</h2>
+                        <p class="movertext" id="c5"><span id="rangevaleq2">10</span> units</p>
+                        <input type="range" min="1" max="100" value="10" id="slidereq2">
+                        <div id="speed">
+                            <h1 id="speedtextl2">1</h1>
+                            <h1 id="speedtextr2">100</h1>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div id="eqtrimbox">
+                    <h2 id="stitle2" class="center">Adjust EQ center trim:</h2>
+                    <br>
+                    <div id="eqtrimmain">
+                        <a id="eqtt1">
+                            <div id="eqt1" class="ease"></div>
+                        </a>
+                        <a id="eqtt2">
+                            <div id="eqt2" class="ease"></div>
+                        </a>
+                        <a id="eqtt3">
+                            <div id="eqt3" class="ease"></div>
+                        </a>
+                        <a id="eqtt4">
+                            <div id="eqt4" class="ease"></div>
+                        </a>
+                        <p id="eqtdisp"><span id="eqtd1">0</span>, <span id="eqtd2">0</span></p>
+                        <canvas class="ease3" id="eqtdemo"></canvas>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </div>
+            <div id="scont4">
+                <h1 id="stitle1">Skins:</h1><a href="skins.html" target="_blank" id="sl1" class="skinlink" onmouseover="playSound5();">how to use sansundertale.cf skins...</a>
+                <br>
+                <br>
+                <div id="filediv">
+                    <button id="folderupload" class="ease"><span id="foldername">Select skin folder...</span></button>
+                    <input type="file" webkitdirectory mozdirectory id="filebutton3" />
+                </div>
+                <br><br>
+                <button id="folderupload" class="ease" onClick="clearSkin();">Clear skin</button>
+                <br>
+                <br>
+            </div>
+            <div id="scont6">
+                <br><br>
+                <div id="rtibox">
+                    <a href="https://www.rtimedia.net/" target="_blank">
+                        <div id="rti" onmouseover="playSound5();"></div>
+                    </a>
+                    <a href="https://www.rpm22.net" target="_blank">
+                        <div id="rti2" onmouseover="playSound5();"><video id="rpmvideo" autoplay="" loop="" muted="" playsinline="">
+                                <source src="https://cdn.rti.llc/rpm22.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                </div>
+                <br><br>
+                <p id="rtitext" class="version">sansundertale.cf</p>
+                <div id="rtilinkcont">
+                    <a href="about.html" target="_blank" id="c7" class="rtitextlink" onmouseover="playSound5();">about</a>
+                    <a href="https://goo.gl/forms/vQgKXFcr7p3n7ibF2" target="_blank" id="c8" class="rtitextlink" onmouseover="playSound5();">submit feedback</a>
+                    <a href="https://www.rtimedia.net/web#sans" target="_blank" id="c9" class="rtitextlink" onmouseover="playSound5();">view changelog</a>
+                </div>
+                <br><br>
+                <a href="https://experimental.rtimedia.net/" target="_blank">
+                    <div id="rtilogo"></div>
+                </a>
+                <br>
+                <a id="rtitext" class="a" href="https://www.rtimedia.net" target="_blank">powered by RTIMedia</a>
+                <p id="rtitext">&copy; 2022 Rory McNamee</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS LAND -->
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="https://experimental.rtimedia.net/rtieq/js/rtieq.js"></script>
+    <script type="text/javascript" src="js/beatsync.js"></script>
+    <script type="text/javascript" src="js/spotifyeq.js"></script>
+
+</body>
+
+</html>

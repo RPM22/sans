@@ -1,0 +1,238 @@
+p {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+#webmain {
+    width: 100%;
+    height: auto;
+    min-height: 75px;
+    background: #077;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    border-radius: 20px;
+}
+
+#webbeta {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: #04cac2;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+#webbetaheader {
+    height: 75px;
+    width: 100%;
+    background: #04aaa2;
+    padding-bottom: 10px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+}
+
+#webbeta2 {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background: #dd9d16;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+#webbeta2header {
+    height: 75px;
+    width: 100%;
+    background: #bd8306;
+    padding-bottom: 10px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+}
+
+#webrelease {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: #26b0cf;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+#webreleaseheader {
+    height: 75px;
+    width: 100%;
+    background: #0094af;
+    padding-bottom: 10px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+}
+
+#webcoming {
+    width: 49%;
+    height: 260px;
+    min-height: 100px;
+    background-color: #066;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    float: left;
+}
+
+.webcoming2 {
+    margin-left: 2%;
+}
+
+#webcomingheader {
+    height: 75px;
+    width: 100%;
+    background: #055;
+    padding-bottom: 10px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+}
+
+#webcomingbox {
+    width: 100%;
+    height: 275px;
+}
+
+#webstatMT {
+    font-size: 45px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin: 0px;
+}
+
+#webstatT {
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+#WebsitesT {
+    font-size: 20px;
+    padding-left: 15px;
+    margin: 0px;
+}
+
+#webstat {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 22px;
+    padding-left: 15px;
+}
+
+#changelog {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+#changelogdone {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-decoration: line-through;
+}
+
+#changelogcheck {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+@media only screen and (max-width: 1279px) and (min-width: 1px) {
+
+
+    #webcoming {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    #webcomingbox {
+        height: auto;
+    }
+
+    .webcoming2 {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    #webkey {
+        height: 190px;
+        text-align: left;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 25px;
+    }
+
+    #webkeytext {
+        float: none;
+        overflow: hidden;
+        text-align: left;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    #webkeyred {
+        float: left;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    #webkeygold {
+        float: left;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    #webkeygreen {
+        float: left;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    #webkeyblue {
+        float: left;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 11px;
+        margin-left: 15px;
+    }
+
+    #webkeypurple {
+        float: left;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 9px;
+        margin-left: 15px;
+    }
+
+}

@@ -1,0 +1,22 @@
+#eqmode3 {
+    display: block;
+}
+
+#eqmode2 {
+    display: none;
+}
+
+#eqmode1 {
+    display: none;
+}
+
+#eqmode4 {
+    display: none;
+}
+
+#eqm3 {
+    color: #1e1b1a;
+    background: white;
+    border: 5px solid white;
+
+}

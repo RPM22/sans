@@ -1,0 +1,309 @@
+window.setInterval(function () {
+    var my_element = document.getElementById('ccbr');
+    if (my_element.isVisible(ccbr)) {
+        $("#y").addClass("white");
+    } else {
+        $("#y").removeClass("white");
+    };
+}, 100);
+
+
+
+$(window).scroll(function () {
+    var fixed = $("div.fixed");
+
+    var fixed_position = $("div.fixed").offset().top;
+    var fixed_height = $("div.fixed").height();
+
+    var toCross_position = $(".div-to-cross").offset().top;
+    var toCross_height = $(".div-to-cross").height();
+
+    if (fixed_position + fixed_height < toCross_position) {
+        fixed.removeClass('white');
+    } else if (fixed_position > toCross_position + toCross_height) {
+        fixed.removeClass('white');
+    } else {
+        fixed.addClass('white');
+    }
+
+});
+
+
+    <div id="mp3_player">
+        <div id="audio_box"></div>
+        <canvas id="analyser_render"></canvas>
+    </div>
+    
+    
+    <div id="hideHead" style="opacity: 100;">
+    </div>
+    <canvas id="visualizer_render" width="1326" height="938"></canvas>
+    
+    
+    
+    <a onclick="settingsNote()" id="settingsnote">*3D mouse tracking effects have been disabled by default, you can re-enable them in the General Settings menu. <span>(click to close me)</span></a>
+    <div id="settingsdiv">
+        <h1 id="stitle">Settings</h1>
+        <div id="scont">
+            <div id="scont5">
+                <h1 id="stitle1">General settings:</h1>
+                <h2 id="stitle3">Hover Sounds:</h2>
+                <div id="switchbody">
+                    <div class="switchslider ease on" id="hs"></div>
+                    <a id="h1">
+                        <h1 class="soff ease" id="h11">OFF</h1>
+                    </a>
+                    <a id="h2">
+                        <h1 class="son ease" id="h22">ON</h1>
+                    </a>
+                </div>
+                <h2 id="stitle3">UI color change:</h2>
+                <div id="switchbody">
+                    <div class="switchslider ease on" id="us"></div>
+                    <a id="u1">
+                        <h1 class="soff ease" id="u11">OFF</h1>
+                    </a>
+                    <a id="u2">
+                        <h1 class="son ease" id="u22">ON</h1>
+                    </a>
+                </div>
+                <h2 id="stitle3">EQ 3D mouse effects:</h2>
+                <div id="switchbody">
+                    <div class="switchslider ease on" id="nintendo3ds"></div>
+                    <a id="nintendo3d1">
+                        <h1 class="soff ease" id="nintendo3d11">OFF</h1>
+                    </a>
+                    <a id="nintendo3d2">
+                        <h1 class="son ease" id="nintendo3d22">ON</h1>
+                    </a>
+                </div>
+                <h2 id="stitle3">AutoClicker interval (ms):</h2>
+                <input type="text" id="autoinput" value="100" onkeypress="javascript:return isNumber(event)" />
+                <h2 id="stitle3">AutoClicker record:</h2>
+                <h2 id="stitle4">1</h2>
+            </div>
+            <div id="scont0">
+                <h1 id="stitle1">Animation Settings:</h1>
+                <h2 id="stitle2" class="center">Change master animation loop speed:</h2>
+                <p class="movertext" id="c5"><span id="rangeval2"></span>s</p>
+                <input type="range" min="1" max="100" value="100" id="slider">
+                <div id="speed">
+                    <h1 id="speedtextl">Normal</h1>
+                    <h1 id="speedtextl">Fast</h1>
+                    <h1 id="speedtextc">Faster</h1>
+                    <h1 id="speedtextr">Very Fast</h1>
+                    <h1 id="speedtextr">Oh No</h1>
+                </div>
+                <div id="speeddemo">
+                    <div id="mover">
+                        <p id="movertext2">wow</p>
+                    </div>
+                </div>
+                <h2 id="stitle2" class="center">Change the animation keyframe type:</h2>
+                <div id="switchabody" class="sb2">
+                    <div class="switchaslider ease on" id="aas"></div>
+                    <a id="keybutton1">
+                        <h1 class="saoff ease" id="aa11">LINEAR</h1>
+                    </a>
+                    <a id="keybutton2">
+                        <h1 class="saon ease" id="aa22">BEZIER</h1>
+                    </a>
+                </div>
+                <br>
+                <h2 id="stitle2" class="center">Change Corner Hit probability:</h2>
+                <p class="movertext" id="c6"><span id="rangeval3">0.0000023</span>%</p>
+                <input type="range" min="1" max="5" value="1" id="slider4">
+                <div id="speed">
+                    <h1 id="speedtextl">Normal</h1>
+                    <h1 id="speedtextl">Increased</h1>
+                    <h1 id="speedtextc">Likely</h1>
+                    <h1 id="speedtextl">Very Likely</h1>
+                    <h1 id="speedtextr">PERFECTION</h1>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div id="scont1">
+                <h1 id="stitle1">Music Settings:</h1>
+                <h2 id="stitle2" class="center">Choose an audio source:</h2>
+                <div id="sourcebar">
+                    <button type="button" class="contentbutton ease" id="content1" onmouseover="playSound5();">Our List</button>
+                    <button type="button" class="contentbutton ease" id="content2" onmouseover="playSound5();">File Upload</button>
+                    <button type="button" class="contentbutton ease" id="content3" onmouseover="playSound5();">Spotify</button>
+                    <button type="button" class="contentbutton ease" id="content4" onmouseover="playSound5();">YouTube</button>
+                    <button type="button" class="contentbutton ease" id="content5" onmouseover="playSound5();">None</button>
+                </div>
+                <div id="sourcecontent">
+                    <div id="pcontrol1">
+                        <h2 id="stitle3">Choose from our list:</h2>
+                        <button type="button" class="sansbutton ease" id="sansbutton0" onmouseover="playSound5();">Megalovania</button>
+                        <br>
+                        <br>
+                        <!--<button type="button" class="sansbutton ease" id="sansbutton1" onmouseover="playSound5();">Earrape Megalovania</button>
+                        <br>
+                        <br>-->
+                        <button type="button" class="sansbutton ease" id="sansbutton6" onmouseover="playSound5();">Megalovania (SSBU Remix)</button>
+                        <br>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton2" onmouseover="playSound5();">Sans.</button>
+                        <br>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton5" onmouseover="playSound5();">WUBWUB SANS</button>
+                        <br>
+                        <br>
+                        <button type="button" class="sansbutton ease" id="sansbutton3" onmouseover="playSound5();">Song That Might Play When You Fight Sans</button>
+                    </div>
+                    <div id="pcontrol2">
+                        <h2 id="stitle2">Upload a file:</h2>
+                        <div id="filediv">
+                            <button id="upload" class="ease">Select audio or video file</button>
+                            <input type="file" accept=".mp3,.wav,.m4a,.aac,.wma,.ogg,.mp4,.mov,.wmv,.mpeg,.avi,.m4v" id="filebutton" />
+                            <p id="filename" class="ease">File: None selected.</p>
+                            <br>
+                            <br>
+                            <h2 id="stitle2">Video file as EQ Background:</h2>
+                            <div id="switchbody">
+                                <div class="switchslider ease on" id="yvss"></div>
+                                <a id="ytbutton22">
+                                    <h1 class="soff ease" id="yv11">OFF</h1>
+                                </a>
+                                <a id="ytbutton11">
+                                    <h1 class="son ease" id="yv22">ON</h1>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pcontrol3"><br>
+                        <br>
+                        <a target="_blank" href="https://accounts.spotify.com/authorize?client_id=a8173e3ac8a048c899dcda327505e21c&redirect_uri=https:%2F%2Fsansundertale.cf%2Fspotify.html&scope=streaming%20user-read-birthdate%20user-read-private%20user-read-email&response_type=token&state=123&scope=web-playback" type="button" class="sansbutton ease" id="spot1" onmouseover="playSound5();">Login to Spotify</a>
+                        <div class="sansbutton ease" id="spot11">Logged in</div>
+                        <br>
+                        <br>
+                        <div class="ease" id="spotinfo">
+                            <h1 id="spottitle">The Spotify Player has been started.</h1>
+                            <p id="spottitle2">You should now be able to select the sansundertale.cf player in your Spotify Connect menu.</p>
+                            <br>
+                            <div id="spotconnect"></div>
+                        </div>
+                    </div>
+                    <div id="pcontrol4">
+                        <br>
+                        <input type="text" id="ytinput" onClick="this.select();" onChance="initYT();" placeholder="Insert YouTube video URL...">
+                        <button type="button" class="contentbutton ease" id="ytsubmit" onClick="initYT();">Submit</button>
+                        <a class="contentbutton ease" id="ytdownload" href="download.html" target="_blank">Download MP4</a>
+                        <br>
+                        <div id="ytthumb"></div>
+                        <h2 id="stitle2" class="center">YouTube Video as EQ Background:</h2>
+                        <div id="switchbody" class="sb2">
+                            <div class="switchslider ease on" id="yvs"></div>
+                            <a id="ytbutton2">
+                                <h1 class="soff ease" id="yv1">OFF</h1>
+                            </a>
+                            <a id="ytbutton1">
+                                <h1 class="son ease" id="yv2">ON</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="pcontrol5"></div>
+                </div>
+            </div>
+            <div id="scont3">
+                <h1 id="stitle1">EQ Settings:</h1>
+                <h2 id="stitle2" class="center">Turn on or off the EQ Visualiser:</h2>
+                <div id="switchbody" class="sb2">
+                    <div class="switchslider ease on" id="eqs"></div>
+                    <a id="eqbutton1">
+                        <h1 class="soff ease" id="eq11">OFF</h1>
+                    </a>
+                    <a id="eqbutton2">
+                        <h1 class="son ease" id="eq22">ON</h1>
+                    </a>
+                </div>
+                <h2 id="stitle2" class="center">Change the EQ &amp; UI color (HSL):</h2>
+                <div id="color">
+                    <input type="range" min="1" max="360" value="190" id="slider2">
+                </div>
+                <div id="color15">
+                    <input type="range" min="1" max="100" value="99" id="slider25">
+                </div>
+                <div id="color2">
+                    <input type="range" min="1" max="100" value="50" id="slider3">
+                </div>
+                <div id="color3">
+                </div>
+                <h2 id="stitle2" class="center">Change background image:</h2>
+                <div id="filediv">
+                    <button id="upload2" class="ease"><span id="filename2">Select Image File...</span></button>
+                    <input type="file" accept=".png,.jpg,.jpeg,.gif,.bmp" id="filebutton2" />
+                </div>
+                <br>
+                <h2 id="stitle2" class="center">Rainbow EQ Mode (Overrides color settings):</h2>
+                <div id="switchbody" class="sb2">
+                    <div class="switchslider ease on" id="rs"></div>
+                    <a id="r1">
+                        <h1 class="soff ease" id="r11">OFF</h1>
+                    </a>
+                    <a id="r2">
+                        <h1 class="son ease" id="r22">ON</h1>
+                    </a>
+                </div>
+                <br>
+            </div>
+            <div id="scont4">
+                <h1 id="stitle1">Skins:</h1><a href="skins.html" target="_blank" id="sl1" class="skinlink" onmouseover="playSound5();">how to use sansundertale.cf skins...</a>
+                <br>
+                <br>
+                <div id="filediv">
+                    <button id="folderupload" class="ease"><span id="foldername">Select skin folder...</span></button>
+                    <input type="file" webkitdirectory mozdirectory id="filebutton3" />
+                </div>
+                <br><br>
+                <button id="folderupload" class="ease" onClick="clearSkin();">Clear skin</button>
+                <br>
+                <br>
+            </div>
+            <div id="scont6">
+                <br>
+                <div id="sgn"></div>
+                <h2 id="stitle2" class="center">Coming soon</h2>
+                <br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a id="exit" class="exitbutton ease" onmouseover="playSound5();">Close Settings</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="rtibox">
+            <a href="https://www.rtimedia.net/" target="_blank">
+                <div id="rti" onmouseover="playSound5();"></div>
+            </a>
+            <a href="https://www.rpm22.net" target="_blank">
+                <div id="rti2" onmouseover="playSound5();"><video id="rpmvideo" autoplay="" loop="" muted="" playsinline="">
+                        <source src="https://cdn.rti.llc/rpm22.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </a>
+        </div>
+        <br>
+        <p id="rtitext" class="version">sansundertale.cf</p>
+        <div id="rtilinkcont">
+            <a href="about.html" target="_blank" id="c7" class="rtitextlink" onmouseover="playSound5();">about</a>
+            <a href="https://goo.gl/forms/vQgKXFcr7p3n7ibF2" target="_blank" id="c8" class="rtitextlink" onmouseover="playSound5();">submit feedback</a>
+            <a href="https://www.rtimedia.net/web#sans" target="_blank" id="c9" class="rtitextlink" onmouseover="playSound5();">view changelog</a>
+        </div>
+        <br>
+        <p id="rtitext">powered by</p>
+        <a href="https://www.rtimedia.net/" target="_blank">
+            <div id="rtilogo"></div>
+        </a>
+        <p id="rtitext">&copy; 2022 Rory McNamee</p>
+        <br>
+        <br>
+    </div>

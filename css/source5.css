@@ -1,0 +1,13 @@
+#pcontrol5 {
+    display: block;
+}
+
+#content5 {
+    color: #2c2928;
+    background: #fff;
+    border: 5px solid #fff;
+}
+
+#loaddiv {
+    display: none;
+}

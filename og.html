@@ -1,0 +1,102 @@
+<!DOCTYPE html><html>
+
+<head>
+    <style>
+        body {
+            margin: 0px;
+            background: black;
+        }
+
+        #x {
+            display: none;
+            width: 20vw;
+            height: 20vw;
+            animation: x 10s linear infinite alternate;
+        }
+
+        #y {
+            animation: y 4.5s linear infinite alternate;
+            position: absolute;
+        }
+
+        @keyframes x {
+            100% {
+                transform: translateX(calc(100vw - 20vw));
+            }
+        }
+
+        @keyframes y {
+            100% {
+                transform: translateY(calc(100vh - 20vw));
+            }
+        }
+
+        #sans {
+            display: block;
+            margin: auto;
+            margin-top: 30vh;
+
+        }
+
+        #checkbox {
+            display: block;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            width: 20vw;
+            height: 20vw;
+            opacity: 0;
+            cursor: pointer;
+
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: Comic Sans MS
+        }
+
+        #checkbox:checked~#sans {
+            display: none;
+        }
+
+        #checkbox:checked~#text {
+            display: none;
+        }
+
+        #checkbox:checked~#x {
+            display: block;
+        }
+
+        #checkbox:checked {
+            display: none;
+        }
+    </style>
+    <title>Initial Release: sANS uNDERTALE</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <input id="checkbox" type="checkbox" onchange="myfunction(this)">
+    <img id="sans" src="https://cdn.rti.llc/sans/sans.jpg" />
+    <h1 id="text">Press Sans from Undertale</h1>
+    <div id="x">
+        <img id="y" src="https://cdn.rti.llc/sans/sans.jpg" alt="sANS" />
+    </div>
+    <label for="checkbox"></label>
+    <script>
+        var audio = new Audio('https://sansundertale.cf/audio/2.mp3');
+        audio.oncanplay = function() {
+            if (document.getElementById("checkbox").checked) this.play()
+        }
+
+        function myfunction(el) {
+            if (el.checked) {
+                audio.load();
+            }
+        }
+    </script>
+</body></html>

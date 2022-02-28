@@ -1,0 +1,864 @@
+body {
+    background: #010101;
+}
+
+#sans {
+    display: none;
+}
+
+#init {
+    display: none;
+}
+
+#maindiv {
+    height: 100vh;
+    position: fixed;
+}
+
+#sansspacer {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+#initspacer {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+#beatsyncstart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    display: none;
+    margin: 0px;
+    z-index: 9999999;
+}
+
+#canvasbg {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 1;
+    background: transparent;
+}
+
+#rtieq {
+    display: block;
+    z-index: 10;
+
+}
+
+#sansplay {
+    display: none;
+}
+
+#sansplay2 {
+    display: block;
+}
+
+#beatsyncstart.visible {
+    border: 5px solid #ddd;
+    color: black;
+    background: #ddd;
+}
+
+#beatsyncstart:hover {
+    border: 5px solid #fff;
+    color: black;
+    background: #fff;
+}
+
+#toTop {
+    display: none;
+}
+
+
+#rpm22icon {
+    display: block;
+}
+
+#textbox {
+    display: none;
+}
+
+.x {
+    display: block;
+    opacity: 1;
+}
+
+.x.sanshide {
+    opacity: 0;
+}
+
+#slink {
+    opacity: 0;
+}
+
+#linkbox {
+    top: -100px;
+}
+
+#animationcont {
+    opacity: 1;
+    z-index: 15;
+    position: absolute;
+    top: 0;
+}
+
+#animationcont.sanshide {
+    opacity: 0;
+}
+
+#cpmain {
+    height: 308px;
+    border-radius: 0px;
+}
+
+#cpmain.hover {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+}
+
+#cpmain.pin {
+    height: 308px;
+    width: 80px;
+    border-radius: 50px 50px 20px 20px;
+}
+
+#cpmain.active {
+    height: 50px;
+    width: 70px;
+    border-radius: 50px;
+    opacity: 0;
+}
+
+#cctl {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    display: none;
+
+}
+
+#cctr {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: blue;
+    display: none;
+
+}
+
+#ccbl {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: blue;
+    display: none;
+
+}
+
+#ccbr {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: red;
+    display: none;
+
+}
+
+#bar {
+    background-image: url(https://cdn.rti.llc/sans/bar.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: bar 0.75s ease-in-out;
+    width: 650px;
+    height: 90px;
+    float: left;
+}
+
+#bargap {
+    position: absolute;
+    width: 100%;
+    max-width: 930px;
+    height: 90px;
+    left: 50%;
+    margin-left: -465px;
+    bottom: 50px;
+    z-index: 99;
+}
+
+#bargap.hide {
+    opacity: 0;
+    bottom: -150px;
+}
+
+#twobar {
+    position: absolute;
+    width: 100%;
+    max-width: 650px;
+    height: 65px;
+    margin-top: 5px;
+    left: 50%;
+    margin-left: -325px;
+    top: 0px;
+    background-image: url(https://cdn.rti.llc/sans/keyboard.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: bar 0.75s ease-in-out;
+    z-index: 9999;
+    display: none;
+}
+
+#twobartwo {
+    width: 250px;
+    height: 65px;
+    margin-top: 18px;
+    margin-right: 30px;
+    background-image: url(https://cdn.rti.llc/sans/keyboard.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: bar3 1.25s ease-in-out;
+    z-index: 9999;
+    float: right;
+}
+
+#barbank {
+    position: absolute;
+    width: 100%;
+    max-width: 650px;
+    height: calc(100vh - 65px);
+    left: 50%;
+    margin-left: -465px;
+    bottom: 65px;
+    pointer-events: none;
+}
+
+#barbank2 {
+    position: absolute;
+    width: 250px;
+    height: calc(100vh - 65px);
+    right: 50%;
+    margin-right: -435px;
+    bottom: 65px;
+    pointer-events: none;
+}
+
+#barbank.hide {
+    opacity: 0;
+}
+
+#barbank2.hide {
+    opacity: 0;
+}
+
+@keyframes bar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bar2 {
+    0% {
+        height: 0px;
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        height: 42px;
+        margin-top: 38px;
+        opacity: 1;
+    }
+}
+
+@keyframes bar3 {
+    0% {
+        height: 0px;
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        height: 65px;
+        margin-top: 18px;
+        opacity: 1;
+    }
+}
+
+#soundbutton1.active {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/1.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bar2 0.25s ease-in-out;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+#soundbutton1.pass {
+    animation: none;
+}
+
+#soundbutton11.active {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/11.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+#soundbutton12.active {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/12.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+#soundbutton13.active {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/13.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+#soundbutton2 {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/2.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bar2 0.5s ease-in-out;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+#soundbutton3 {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/3.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bar2 0.75s ease-in-out;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+#soundbutton4 {
+    background: transparent;
+    background-image: url(https://cdn.rti.llc/sans/4.png);
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 38px;
+    height: 42px;
+    border: 0px;
+    display: inline-block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bar2 1s ease-in-out;
+    position: relative;
+    z-index: 9990;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+}
+
+.bar {
+    background: url(https://cdn.rti.llc/sans/beam.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#bar1 {
+    width: 15%;
+    margin-left: 5%;
+    height: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 999;
+}
+
+#bar2 {
+    width: 15%;
+    margin-left: 30%;
+    height: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 999;
+}
+
+#bar3 {
+    width: 15%;
+    margin-left: 55%;
+    height: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 999;
+}
+
+#bar4 {
+    width: 15%;
+    margin-left: 80%;
+    height: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 999;
+}
+
+#bar1.active {
+    height: 50vh;
+}
+
+#bar2.active {
+    height: 50vh;
+}
+
+#bar3.active {
+    height: 50vh;
+}
+
+#bar4.active {
+    height: 50vh;
+}
+
+
+
+#bar21 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+#bar22 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 25px;
+    position: absolute;
+}
+
+#bar23 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 50px;
+    position: absolute;
+}
+
+#bar24 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 75px;
+    position: absolute;
+}
+
+#bar25 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 100px;
+    position: absolute;
+}
+
+#bar26 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 125px;
+    position: absolute;
+}
+
+#bar27 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 150px;
+    position: absolute;
+}
+
+#bar28 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 175px;
+    position: absolute;
+}
+
+#bar29 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 200px;
+    position: absolute;
+}
+
+#bar210 {
+    width: 25px;
+    height: 0px;
+    bottom: 0px;
+    left: 225px;
+    position: absolute;
+}
+
+#bar21.active {
+    height: 170px;
+}
+
+#bar22.active {
+    height: 170px;
+}
+
+#bar23.active {
+    height: 170px;
+}
+
+#bar24.active {
+    height: 170px;
+}
+
+#bar25.active {
+    height: 170px;
+}
+
+#bar26.active {
+    height: 170px;
+}
+
+#bar27.active {
+    height: 170px;
+}
+
+#bar28.active {
+    height: 170px;
+}
+
+#bar29.active {
+    height: 170px;
+}
+
+#bar210.active {
+    height: 170px;
+}
+
+.audio-player {
+    width: 95%;
+    height: 35px;
+    max-width: 930px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    z-index: 99999999;
+    display: block;
+}
+
+.audio-player.hide {
+    opacity: 0;
+    bottom: -150px;
+}
+
+.player-controls {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.player-controls progress {
+    width: calc(100% - 150px);
+    float: left;
+}
+
+.player-controls progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#seekObjContainer {
+    margin-top: 10px;
+}
+
+#seekObj {
+    border-radius: 10px;
+    cursor: url(https://cdn.rti.llc/sans/icon.png), auto;
+    margin: auto;
+    height: 15px;
+    margin-bottom: 2.5px;
+    margin-top: 2.5px;
+    z-index: 9999999;
+    background-color: #111d;
+    border: 0px;
+}
+
+
+#seekObj:hover {
+    height: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#seekObj[value]::-webkit-progress-bar {
+    background-color: #111d;
+    border-radius: 10px;
+}
+
+#seekObj::-webkit-progress-value {
+    background: #ff802c;
+    border-radius: 10px;
+    background-size: 1000px;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+#seekObj[value]::-moz-progress-bar {
+    background-color: #ff802c;
+    border-radius: 10px;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+.start-time {
+    color: white;
+    font-family: 'CS';
+    float: left;
+    position: relative;
+    right: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    width: 50px;
+    padding-right: 25px;
+    text-align: center;
+    text-shadow: 1.5px 1.5px #000;
+}
+
+.end-time {
+    color: white;
+    font-family: 'CS';
+    float: left;
+    position: relative;
+    right: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    width: 50px;
+    padding-left: 25px;
+    text-align: center;
+    text-shadow: 1.5px 1.5px #000;
+}
+
+
+@media only screen and (max-width: 950px) and (min-width: 1px) {
+
+    #twobartwo {
+        display: none;
+    }
+
+    #twobar {
+        display: none;
+    }
+
+    #bargap {
+        max-width: 650px;
+        left: 50%;
+        margin-left: -325px;
+    }
+
+    #barbank {
+        position: absolute;
+        width: 100%;
+        max-width: 650px;
+        left: 50%;
+        margin-left: -325px;
+    }
+
+    #barbank2 {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 745px) and (min-width: 1px) {
+
+
+
+    #cpmain {
+        top: 5px;
+        left: 5px;
+        width: calc(100vw - 15px);
+        height: 12.5vw;
+    }
+
+    #cpmain.pin {
+        height: 12.5vw;
+        width: calc(100vw - 15px);
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    #cpmain.active {
+        border-radius: 25px;
+    }
+
+    #playercontainer.ios {
+        height: calc(100vh - 0px);
+    }
+
+    #masterplayer.ios {
+        min-height: calc(100vh - 0px);
+        top: calc(50% - 37px);
+    }
+
+    body.ios {
+        height: calc(100vh - 0px);
+    }
+
+    #maindiv {
+        height: calc(87.5vw);
+        min-height: 0px;
+        top: 12.5vw;
+
+    }
+
+    #maindiv.ios {
+        height: calc(87.5vh - 0px);
+        min-height: 0px;
+        top: 12.5vw;
+    }
+
+    #bgbox.ios {
+        height: calc(100vh - 0px);
+    }
+
+    #visualizer_render.ios {
+        height: calc(100vh - 0px);
+    }
+
+    #visualizer_render_two.ios {
+        height: calc(100vh - 0px);
+    }
+
+    #rpm22icon.ios {
+        margin-top: -37px;
+    }
+}
+
+@media only screen and (max-width: 650px) and (min-width: 1px) {
+
+    #bar {
+        margin: 0px;
+        width: 100%;
+        left: 50%;
+    }
+
+    #bargap {
+        margin-left: -50%;
+    }
+
+    #barbank {
+        left: 0px;
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,3 @@
+/*
+X-Frame-Option: Allow-from "https://www.rtimedia.net/"
+Access-Control-Allow-Origin: *
