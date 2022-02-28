@@ -4,8 +4,8 @@
 
 // yes i know its messy and that jquery is slow yadda yadda shhhhhhhhhhhhut up
 
-var version = '5.3';
-var versiondate = '11/18/21';
+var version = '5.3.1';
+var versiondate = '2/27/22';
 
 // CONSOLE STUFF
 // plug 100

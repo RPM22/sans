@@ -26,6 +26,11 @@
     transition: all .1s ease;
 }
 
+.ul {
+    text-decoration: underline;
+    
+}
+
 html {
     cursor: url(https://cdn.rti.llc/sans/icon2.png), auto;
     font-family: CS;
