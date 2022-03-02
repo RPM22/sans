@@ -454,7 +454,7 @@ $("#content1").click(function () {
 });
 
 $("#content2").click(function () {
-    var ytvalue = Cookies("ytshow");
+    var ytvalue = Cookies.set("ytshow");
     if (ytvalue == 1) {
         $("#masterplayer").addClass("show");
         yton();
@@ -481,7 +481,7 @@ $("#content3").click(function () {
 });
 
 $("#content4").click(function () {
-    var ytvalue = Cookies("ytshow");
+    var ytvalue = Cookies.set("ytshow");
     if (ytvalue == 1) {
         $("#masterplayer").addClass("show");
         yton();
