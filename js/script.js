@@ -1,11 +1,12 @@
-// sansundertale.cf
+// sansundertale.cf / sans.rti.llc
 // MASTER JS FILE
-// COPYRIGHT 2021 Rory McNamee
+// COPYRIGHT 2022 Rory McNamee
 
-// yes i know its messy and that jquery is slow yadda yadda shhhhhhhhhhhhut up
+// yes i know its messy and that jquery is slow yadda yadda shut up
 
-var version = '5.3.1';
-var versiondate = '2/27/22';
+var version = '5.3.2';
+var versiondate = '3/1/22';
+var pageurl = window.location.hostname;
 
 // CONSOLE STUFF
 // plug 100
@@ -37,14 +38,15 @@ var rti87 = "-=-=+|   https://www.rti.llc    |+=-=-";
 var rti89 = "~ sansundertale.cf HAS LOADED";
 var rti9 = "𝘌𝘯𝘫𝘰𝘺 𝘢𝘭𝘭 𝘰𝘧 𝘵𝘩𝘦 𝘦𝘳𝘳𝘰𝘳𝘴 𝘪𝘯 𝘮𝘺 𝘮𝘦𝘴𝘴𝘺 𝘤𝘰𝘥𝘦:";
 
-$(".version").text('sansundertale.cf version ' + version);
-$(".version2").text('v' + version + ' - ' + versiondate);
+$("#text1").text(pageurl);
+$(".version").text(pageurl + ' version ' + version);
+$(".version2").text(pageurl + ' v' + version + ' - ' + versiondate);
 var loadtext = document.getElementById("fart");
 var rtieqIcon = "url(https://cdn.rti.llc/sans/load.png)";
 var rtieqTimeUpdate = 1;
 var rtieqAnimationSpeed = 15;
 
-$(window).load(function () {
+$(window).on('load', function () {
     console.log(itr1 + '\n' + itr2 + '\n' + itr3 + '\n' + itr4 + '\n' + itr5 + '\n' + itr6 + '\n' + '\n' + itr7 + '\n' + itr8 + '\n' + '\n' + rti0 + '\n' + rti05 + '\n' + rti1 + '\n' + rti2 + '\n' + rti3 + '\n' + rti4 + '\n' + rti5 + '\n' + rti6 + '\n' + rti7 + '\n' + rti75 + '\n' + '\n' + rti8 + '\n' + rti82 + '\n' + '\n' + rti85 + '\n' + rti87 + '\n' + '\n' + '𝘴𝘢𝘯𝘴𝘶𝘯𝘥𝘦𝘳𝘵𝘢𝘭𝘦.𝘤𝘧 𝘷𝘦𝘳𝘴𝘪𝘰𝘯 ' + version + '\n' + '𝘳𝘦𝘭𝘦𝘢𝘴𝘦𝘥 𝘰𝘯 ' + versiondate);
     setTimeout(function () {
         $('#plbar').addClass("loaded");
@@ -58,6 +60,10 @@ $(window).load(function () {
         }, 500);
     }, 1250);
 });
+
+if (pageurl === "sansundertale.cf") {
+    document.getElementById('warning').style.display = 'block';
+}
 
 $(function () {
     $("#htmlsect").load("../changelog.html");
@@ -73,7 +79,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    var setval = $.cookie("setvalue");
+    var setval = Cookies.get("setvalue");
     if (setval == 0) {
         if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
             $('#toTop').addClass("scroll");
@@ -135,7 +141,7 @@ window.onresize = deviceCheck;
 var threedshow, threeCheck, mX, mY;
 
 $(document).mousemove(function (e) {
-    threedshow = $.cookie("3dshow");
+    threedshow = Cookies.get("3dshow");
     if ("ontouchstart" in document.documentElement) {
         document.getElementById('init').style.transform = "perspective(525px) translateZ(0px) rotateX(0deg) rotateY(0deg)";
     } else {
@@ -174,7 +180,7 @@ $("#nintendo3d2").click(function () {
 });
 
 $(window).mouseleave(function () {
-    threedshow = $.cookie("3dshow");
+    threedshow = Cookies.get("3dshow");
     threeCheck = 0;
     if (threedshow == 1) {
         document.getElementById('rtieq').style.transform = "perspective(525px) translateZ(0px) rotateX(0deg) rotateY(0deg)";
@@ -193,7 +199,7 @@ $(window).mouseleave(function () {
 
 
 
-var spotlogin = $.cookie("spotlogin");
+var spotlogin = Cookies.get("spotlogin");
 
 $('#changelogstart').on('click', function () {
     $('#changelogstart').toggleClass("changelog");
@@ -295,12 +301,12 @@ $("#content1").click(function () {
     $('#sourcecss').append('@import url(css/source1.css)');
     $("#songcss").empty();
     loadSRC();
-    jQuery.cookie('spotlogin', 0);
+    Cookies.set('spotlogin', 0);
     sansAudioPause();
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
     $("#rpm22icon").addClass("pause");
     convertSpotify();
 });
@@ -308,12 +314,12 @@ $("#content1").click(function () {
 $("#content2").click(function () {
     $("#sourcecss").empty();
     $('#sourcecss').append('@import url(css/source2.css)');
-    jQuery.cookie('spotlogin', 0);
+    Cookies.set('spotlogin', 0);
     sansAudioPause();
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
     $("#rpm22icon").addClass("pause");
     convertSpotify();
 });
@@ -321,12 +327,12 @@ $("#content2").click(function () {
 $("#content3").click(function () {
     $("#sourcecss").empty();
     $('#sourcecss').append('@import url(css/source3.css)');
-    jQuery.cookie('spotlogin', 0);
+    Cookies.set('spotlogin', 0);
     sansAudioPause();
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
     $("#rpm22icon").addClass("pause");
     convertSpotify();
     rtieqURL = 'null';
@@ -334,7 +340,7 @@ $("#content3").click(function () {
 
 window.setInterval(function () {
 
-    var spotlogin = $.cookie("spotlogin");
+    var spotlogin = Cookies.get("spotlogin");
     if (spotlogin == 1) {
         $("#spot1").addClass("login");
         $("#spot11").addClass("login");
@@ -347,10 +353,10 @@ window.setInterval(function () {
 }, 250);
 
 window.setInterval(function () {
-    var spotload = $.cookie("spotload");
+    var spotload = Cookies.get("spotload");
 
     if (spotload == 1) {
-        jQuery.cookie('spotload', 0);
+        Cookies.set('spotload', 0);
         initSpotify();
     }
 }, 250);
@@ -358,12 +364,12 @@ window.setInterval(function () {
 $("#content4").click(function () {
     $("#sourcecss").empty();
     $('#sourcecss').append('@import url(css/source4.css)');
-    jQuery.cookie('spotlogin', 0);
+    Cookies.set('spotlogin', 0);
     sansAudioPause();
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
     $("#rpm22icon").addClass("pause");
     convertSpotify();
 });
@@ -371,12 +377,12 @@ $("#content4").click(function () {
 $("#content5").click(function () {
     $("#sourcecss").empty();
     $('#sourcecss').append('@import url(css/source5.css)');
-    jQuery.cookie('spotlogin', 0);
+    Cookies.set('spotlogin', 0);
     sansAudioPause();
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
     $("#rpm22icon").addClass("pause");
     convertSpotify();
 });
@@ -543,7 +549,7 @@ $('#apply1').on('click', function () {
 });
 
 function playSound5() {
-    var gs1 = $.cookie("gs1");
+    var gs1 = Cookies.get("gs1");
     if (gs1 == 1) {
         var sound = document.getElementById("sanstalk");
         sound.currentTime = 0;
@@ -621,7 +627,7 @@ $('#settingscheck').on('click', function (e) {
     var $window = $(window);
     var windowsize = $window.width();
     if (windowsize < 1279) {
-        var startvar = $.cookie("start1");
+        var startvar = Cookies.get("start1");
         if (startvar == 1) {
             $('#controlbox2').toggleClass("active");
             $('#controlbox').toggleClass("active");
@@ -630,13 +636,13 @@ $('#settingscheck').on('click', function (e) {
             $('#sansclick').toggleClass("active");
         }
     }
-    var setval = $.cookie("setvalue");
+    var setval = Cookies.get("setvalue");
     if (setval == 0) {
-        jQuery.cookie('setvalue', 1);
+        Cookies.set('setvalue', 1);
     }
 
     if (setval == 1) {
-        jQuery.cookie('setvalue', 0);
+        Cookies.set('setvalue', 0);
     }
     e.preventDefault();
 });
@@ -645,7 +651,7 @@ $(".hovergroup1").hover(function () {
     var $window = $(window);
     var windowsize = $window.width();
     if (windowsize > 1279) {
-        var start1 = $.cookie("start1");
+        var start1 = Cookies.get("start1");
         if (start1 == 1) {
             $('#cpmain').removeClass("hover");
         }
@@ -654,7 +660,7 @@ $(".hovergroup1").hover(function () {
     var $window = $(window);
     var windowsize = $window.width();
     if (windowsize > 1279) {
-        var start1 = $.cookie("start1");
+        var start1 = Cookies.get("start1");
         if (start1 == 1) {
             $('#cpmain').addClass("hover");
         }
@@ -682,7 +688,7 @@ function exitSettings() {
     $('#maindiv').removeClass("active");
     $('#cpmain').removeClass("active");
     if (windowsize < 1279) {
-        var start1 = $.cookie("start1");
+        var start1 = Cookies.get("start1");
         if (start1 == 1) {
             $('#controlbox2').removeClass("active");
             $('#controlbox').removeClass("active");
@@ -691,7 +697,7 @@ function exitSettings() {
             $('#sansclick').removeClass("active");
         }
     }
-    jQuery.cookie('setvalue', 0);
+    Cookies.set('setvalue', 0);
 
 }
 $('#exit').on('click', function () {
@@ -722,7 +728,7 @@ $('#sanshide3').on('click', function () {
 
 $(window).keydown(function (e) {
     if (e.which == 27) {
-        var setval = $.cookie("setvalue");
+        var setval = Cookies.get("setvalue");
         if (setval == 0) {
             exitHide();
         } else if (setval == 1) {
@@ -745,7 +751,7 @@ function exitHide() {
 
 function initClicky() {
     $(document).keydown(function (e) {
-        var setval = $.cookie("setvalue");
+        var setval = Cookies.get("setvalue");
         if (setval == 0) {
             if (e.which == 90) {
                 if ($("#soundbutton1").hasClass("active")) {
@@ -980,11 +986,11 @@ function initClicky() {
 $('#sanstrigger').click(function () {
     $('#warning').addClass("close");
     initClicky();
-    jQuery.cookie('start1', 1);
+    Cookies.set('start1', 1);
 });
 $('#sansplay').click(function () {
     initClicky();
-    jQuery.cookie('start1', 1);
+    Cookies.set('start1', 1);
 });
 
 
@@ -1008,23 +1014,23 @@ $("#sansvol").click(function () {
 });
 
 var setSliderInitial = function () {
-    var themevalue = $.cookie("sans1");
-    var themevalue2 = $.cookie("sans2");
-    var slideval = $.cookie("sans3");
-    if (typeof $.cookie('sans3') === 'undefined') {
+    var themevalue = Cookies.get("sans1");
+    var themevalue2 = Cookies.get("sans2");
+    var slideval = Cookies.get("sans3");
+    if (typeof Cookies.get('sans3') === 'undefined') {
         output.innerHTML = (100 * 0.1).toFixed(1);
         document.getElementById("slider").value = 100;
-        jQuery.cookie('sans3', 100);
+        Cookies.set('sans3', 100);
     } else {
         setSpeedInital();
     };
-    if (typeof $.cookie('sans1') === 'undefined') {
-        jQuery.cookie('sans1', 0);
+    if (typeof Cookies.get('sans1') === 'undefined') {
+        Cookies.set('sans1', 0);
     } else {
         setSpeedInital();
     };
-    if (typeof $.cookie('sans2') === 'undefined') {
-        jQuery.cookie('sans2', 0);
+    if (typeof Cookies.get('sans2') === 'undefined') {
+        Cookies.set('sans2', 0);
     } else {
         setSpeedInital();
     };
@@ -1034,10 +1040,10 @@ var rangeSelector = $('#slider');
 var mover = $('#mover');
 var rpm22icon = $('#rpm22icon');
 var settingscheck = $('#settingscheck');
-var themevalue = $.cookie("sans1");
-var themevalue2 = $.cookie("sans2");
-var slideval = $.cookie("sans3");
-var cookie = $.cookie("cookie");
+var themevalue = Cookies.get("sans1");
+var themevalue2 = Cookies.get("sans2");
+var slideval = Cookies.get("sans3");
+var cookie = Cookies.get("cookie");
 var slider = document.getElementById("slider");
 var sliderfour = document.getElementById("slider4");
 var output = document.getElementById("rangeval2");
@@ -1049,7 +1055,7 @@ output.innerHTML = (rangeSelector.val() * 0.1).toFixed(1);
 $(document).on("input", slider, function () {
     setSpeedValue();
     output.innerHTML = (rangeSelector.val() * 0.1).toFixed(1);
-    jQuery.cookie('sans3', rangeSelector.val());
+    Cookies.set('sans3', rangeSelector.val());
 });
 $(document).on("input", sliderfour, function () {
     var sansX = $('.x');
@@ -1081,7 +1087,7 @@ $(document).on("input", sliderfour, function () {
         });
         outputfour.innerHTML = 100;
     } else {};
-    jQuery.cookie('sans2', sliderfourval);
+    Cookies.set('sans2', sliderfourval);
 });
 
 var constvar;
@@ -1122,7 +1128,7 @@ function setSpeedValue() {
     constloop = clearInterval();
     constloop = setInterval(constLooper, constVar);**/
 
-    var sourcevalue = $.cookie("source1");
+    var sourcevalue = Cookies.get("source1");
     if (sourcevalue == 3) {
         rpm22icon.css({
             'animation-duration': '0.75s'
@@ -1166,7 +1172,7 @@ $("#sansadd").click(function () {
 
 function addSans() {
 
-    var start = $.cookie("start1");
+    var start = Cookies.get("start1");
     if (start == 1) {
         var auto = document.getElementById("stitle4");
         var divx = document.createElement("div");
@@ -1180,9 +1186,9 @@ function addSans() {
         console.log('SansCount: ' + fired);
         var sanscount = document.getElementById("sanscount");
         sanscount.innerHTML = fired;
-        var oldval = $.cookie("sanscount");
+        var oldval = Cookies.get("sanscount");
         if (oldval < fired) {
-            jQuery.cookie('sanscount', fired, {
+            Cookies.set('sanscount', fired, {
                 expires: 365,
                 path: '/'
             });
@@ -1258,8 +1264,8 @@ $('#settingscheck').click(function () {
 });
 
 var setSpeedInital = function () {
-    var slideval = $.cookie("sans3");
-    var slidevalTwo = $.cookie("sans2");
+    var slideval = Cookies.get("sans3");
+    var slidevalTwo = Cookies.get("sans2");
     output.innerHTML = (slideval * 0.1).toFixed(1);
     document.getElementById("slider").value = slideval;
     document.getElementById("slider4").value = slidevalTwo;
@@ -1280,11 +1286,11 @@ var setSpeedInital = function () {
 $(document).ready(function () {
     setSliderInitial();
     setSpeedValue();
-    var colorval = $.cookie("sans4");
+    var colorval = Cookies.get("sans4");
     document.getElementById("slider2").value = colorval;
-    var colorvalTwoFive = $.cookie("sans6");
+    var colorvalTwoFive = Cookies.get("sans6");
     document.getElementById("slider25").value = colorvalTwoFive;
-    var colorvalTwo = $.cookie("sans5");
+    var colorvalTwo = Cookies.get("sans5");
     document.getElementById("slider3").value = colorvalTwo;
     initColorSelect();
 });
@@ -1586,17 +1592,17 @@ function updateEQ() {
 pause = 1;
 isSeeking = 0;
 
-jQuery.cookie('start1', 0);
-jQuery.cookie('start2', 0);
+Cookies.set('start1', 0);
+Cookies.set('start2', 0);
 
 var inputbox = document.getElementById('filebutton');
 var inputboxtwo = document.getElementById('filebutton2');
 
 $(document).ready(function () {
-    var sourcevalue = $.cookie("source1");
-    var yturl = $.cookie("yturl");
-    var yturlold = $.cookie("yturlold");
-    var ytid = $.cookie("ytid1");
+    var sourcevalue = Cookies.get("source1");
+    var yturl = Cookies.get("yturl");
+    var yturlold = Cookies.get("yturlold");
+    var ytid = Cookies.get("ytid1");
     if (sourcevalue == 4) {
         document.getElementById('ytthumb').style.backgroundImage = 'url(https://img.youtube.com/vi/' + ytid + '/hqdefault.jpg';
         document.getElementById("ytinput").value = yturlold;
@@ -1633,11 +1639,11 @@ function initPage() {
 
     loadSRC();
     settingsNote();
-    //frameDemo();
+    // frameDemo();
     convertSpotify();
     loadsplash();
     reloadPlayer();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
     setInterval(checkBuffering, checkInterval);
     sansAudioPlay();
 
@@ -1663,9 +1669,9 @@ function sansAudioPause() {
 
 function loadSRC() {
 
-    var themevalue = $.cookie("sans1");
-    var sourcevalue = $.cookie("source1");
-    var yturl = $.cookie("yturl");
+    var themevalue = Cookies.get("sans1");
+    var sourcevalue = Cookies.get("source1");
+    var yturl = Cookies.get("yturl");
     if (sourcevalue == 4) {
         rtieqURL = yturl;
     } else if (sourcevalue == 3) {
@@ -1722,7 +1728,7 @@ function loadsplash() {
 };
 
 function convertSpotify() {
-    var sourcevalue = $.cookie("source1");
+    var sourcevalue = Cookies.get("source1");
     if (sourcevalue == 3) {
         $("#rpm22icon").addClass("spotify");
         rpm22icon.css({
@@ -1736,17 +1742,17 @@ function convertSpotify() {
 }
 
 function initSpotify() {
-    jQuery.cookie('sans1', 7);
+    Cookies.set('sans1', 7);
     initSpotifyPlayer();
     sansAudioPause();
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
 };
 
 function initSpotifyPlayer() {
-    var spottoken = $.cookie("spottoken");
+    var spottoken = Cookies.get("spottoken");
     var spotplayer = new Spotify.Player({
         name: 'sansundertale.cf',
         getOAuthToken: cb => {
@@ -1800,7 +1806,7 @@ function initSpotifyPlayer() {
 
     $(window).keydown(function (e) {
         if (e.which == 32) {
-            var startvar = $.cookie("start1");
+            var startvar = Cookies.get("start1");
             if (startvar == 1) {
                 spotplayer.togglePlay().then(() => {
                     console.log('SansSpotifyPlayer: Toggled playback!');
@@ -1816,7 +1822,7 @@ function initSpotifyPlayer() {
     });
 
     window.setInterval(function () {
-        var spotlogin = $.cookie("spotlogin");
+        var spotlogin = Cookies.get("spotlogin");
         if (spotlogin == 0) {
             spotplayer.disconnect();
         }
@@ -1824,7 +1830,7 @@ function initSpotifyPlayer() {
 };
 
 function initYT() {
-    var startvar = $.cookie("start1");
+    var startvar = Cookies.get("start1");
 
     var url = $('#ytinput').val();
     var VID_REGEX = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
@@ -1835,16 +1841,16 @@ function initYT() {
         $("#ytdownload").attr("href", 'https://ytdl-back.herokuapp.com/download?quality=MP3&url=' + ytid);
         $('#ytdownload').addClass('active');
     }
-    jQuery.cookie('yturl', newurl);
-    jQuery.cookie('ytid1', ytid);
-    jQuery.cookie('yturlold', url);
+    Cookies.set('yturl', newurl);
+    Cookies.set('ytid1', ytid);
+    Cookies.set('yturlold', url);
     if (startvar == 1) {
         rtieqURL = newurl;
         reloadPlayer();
         loadsplash();
         sansAudioPlay();
         setSpeedValue();
-        jQuery.cookie('playerstatus', 1);
+        Cookies.set('playerstatus', 1);
 
     };
 
@@ -1860,7 +1866,7 @@ inputbox.onchange = function (e) {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 }
 
@@ -1881,7 +1887,7 @@ $("#sanspause").click(function () {
     rpm22icon.css({
         'animation-duration': '0.75s'
     });
-    jQuery.cookie('playerstatus', 0);
+    Cookies.set('playerstatus', 0);
     $("#rpm22icon").addClass("pause");
 });
 
@@ -1894,7 +1900,7 @@ $("#sansplay2").click(function () {
         sansAudioPlay();
     };
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1905,7 +1911,7 @@ $("#sansbutton0").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1916,7 +1922,7 @@ $("#sansbutton1").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1927,7 +1933,7 @@ $("#sansbutton2").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1938,7 +1944,7 @@ $("#sansbutton3").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1949,7 +1955,7 @@ $("#sansbutton4").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1960,7 +1966,7 @@ $("#sansbutton5").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1971,7 +1977,7 @@ $("#sansbutton6").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1982,7 +1988,7 @@ $("#sansbutton7").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -1993,7 +1999,7 @@ $("#sansbutton8").click(function () {
     loadsplash();
     sansAudioPlay();
     setSpeedValue();
-    jQuery.cookie('playerstatus', 1);
+    Cookies.set('playerstatus', 1);
 
 });
 
@@ -2022,7 +2028,7 @@ function refreshLoop(analyser) {
 
 $(window).one("keypress", function (e) {
     if (e.which == 32) {
-        jQuery.cookie('start1', 1);
+        Cookies.set('start1', 1);
     }
 });
 
@@ -2031,7 +2037,7 @@ $(window).one("keypress", function (e) {
 
 $(window).keydown(function (e) {
     if (e.which == 32) {
-        var startvar = $.cookie("start1");
+        var startvar = Cookies.get("start1");
         if (startvar == 0) {
             initPage();
             initClicky();
@@ -2039,20 +2045,20 @@ $(window).keydown(function (e) {
             setSpeedValue();
             $("#sanscss").empty();
             $('#sanscss').append('@import url(css/active.css)');
-            jQuery.cookie('start1', 1);
+            Cookies.set('start1', 1);
 
         } else if (startvar == 1) {
             if (htmlAudio.paused) {
                 sansAudioPlay();
                 setSpeedValue();
-                jQuery.cookie('playerstatus', 1);
+                Cookies.set('playerstatus', 1);
 
             } else {
                 sansAudioPause();
                 rpm22icon.css({
                     'animation-duration': '0.75s'
                 });
-                jQuery.cookie('playerstatus', 0);
+                Cookies.set('playerstatus', 0);
                 $("#rpm22icon").addClass("pause");
             }
         }
@@ -2068,19 +2074,19 @@ var slidercolorTwo = document.getElementById("slider3");
 
 slidercolor.oninput = function () {
     setSpeedValue();
-    jQuery.cookie('sans4', colorSelector.val());
+    Cookies.set('sans4', colorSelector.val());
     initColorSelect();
 }
 
 slidercolorTwoFive.oninput = function () {
     setSpeedValue();
-    jQuery.cookie('sans6', colorSelectorTwoFive.val());
+    Cookies.set('sans6', colorSelectorTwoFive.val());
     initColorSelect();
 }
 
 slidercolorTwo.oninput = function () {
     setSpeedValue();
-    jQuery.cookie('sans5', colorSelectorTwo.val());
+    Cookies.set('sans5', colorSelectorTwo.val());
     initColorSelect();
 }
 
@@ -2102,9 +2108,9 @@ function initColorSelect() {
     rtieqHue = colorSelector.val();
     rtieqSat = colorSelectorTwoFive.val();
     rtieqBright = colorSelectorTwo.val();
-    gs2 = $.cookie("gs2");
+    gs2 = Cookies.get("gs2");
     if (gs2 == 1) {
-        var startvar = $.cookie("start1");
+        var startvar = Cookies.get("start1");
         if (startvar == 0) {
             document.body.style.backgroundImage = 'linear-gradient(45deg, hsl(' + colorSelector.val() + ', 91%, 5%) 0%, hsl(' + colorSelector.val() + ', 98%, 22%) 100%)';
         } else {
@@ -2177,10 +2183,10 @@ function removeColorSelect() {
 };
 
 var bruh;
-var colorval = $.cookie("sans4");
-var colorval2 = $.cookie("sans5");
-var colorval3 = $.cookie("sans6");
-var rtieqRainbow = $.cookie("rs1");
+var colorval = Cookies.get("sans4");
+var colorval2 = Cookies.get("sans5");
+var colorval3 = Cookies.get("sans6");
+var rtieqRainbow = Cookies.get("rs1");
 bruh = 0;
 
 $("#r1").click(function () {
@@ -2238,7 +2244,7 @@ $("#eqtt4").click(function () {
 function frameDemo() {
     canvas2.width = 300;
     canvas2.height = 300;
-    var eqvalue = $.cookie("eq1");
+    var eqvalue = Cookies.get("eq1");
 
     if (eqvalue == 0) {
 
@@ -2348,28 +2354,29 @@ function frameDemo() {
     }
 };
 
+// fake loading text lol
 
 console.log('~ SCRIPT.JS LOADED');
 loadtext.innerHTML = 'main CSS file';
 setTimeout(function () {
     loadtext.innerHTML = 'main JS file';
     setTimeout(function () {
-        loadtext.innerHTML = 'CDN media files';
+        loadtext.innerHTML = 'RTICDN media files';
         setTimeout(function () {
-            loadtext.innerHTML = 'master player content';
+            loadtext.innerHTML = 'CDN script library';
             setTimeout(function () {
-                loadtext.innerHTML = 'CDN script library';
+                loadtext.innerHTML = 'main player content';
                 setTimeout(function () {
-                    loadtext.innerHTML = 'user preferences';
+                    loadtext.innerHTML = 'RTI EQ API';
                     setTimeout(function () {
                         loadtext.innerHTML = 'user settings';
                         setTimeout(function () {
                             loadtext.innerHTML = 'start page content';
                         }, 50);
                     }, 50);
-                }, 50);
-            }, 500);
-        }, 200);
+                }, 200);
+            }, 400);
+        }, 150);
     }, 100);
 }, 200);
 

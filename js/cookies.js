@@ -5,81 +5,81 @@
 
 
 // ok the actual cookies now
-var themevalue = $.cookie("sans1");
-var themevalue2 = $.cookie("sans2");
-var eqvalue = $.cookie("eq1");
-var keyvalue = $.cookie("key1");
-var sourcevalue = $.cookie("source1");
-var ytvalue = $.cookie("ytshow");
-var setval = $.cookie("setvalue");
-var gs1 = $.cookie("gs1");
-var gs2 = $.cookie("gs2");
-var rs1 = $.cookie("rs1");
-var threedshoww = $.cookie("3dshow");
-var oldval = $.cookie("sanscount");
+var themevalue = Cookies.get("sans1");
+var themevalue2 = Cookies.get("sans2");
+var eqvalue = Cookies.get("eq1");
+var keyvalue = Cookies.get("key1");
+var sourcevalue = Cookies.get("source1");
+var ytvalue = Cookies.get("ytshow");
+var setval = Cookies.get("setvalue");
+var gs1 = Cookies.get("gs1");
+var gs2 = Cookies.get("gs2");
+var rs1 = Cookies.get("rs1");
+var threedshoww = Cookies.get("3dshow");
+var oldval = Cookies.get("sanscount");
 var auto = document.getElementById("stitle4");
 var colorchangetext = document.getElementById("stitle22");
 
 $(document).ready(function () {
     $(document).scrollTop(0);
+    if (typeof Cookies.get('connected') === 'undefined') {
+        Cookies.set('connected', '0', {
+            expires: 365,
+            path: '/'
+        })
+    };
+    if (typeof Cookies.get('gs1') === 'undefined') {
+        Cookies.set('gs1', '0', {
+            expires: 365,
+            path: '/'
+        })
+    };
+    if (typeof Cookies.get('gs2') === 'undefined') {
+        Cookies.set('gs2', '1', {
+            expires: 365,
+            path: '/'
+        })
+    };
+    if (typeof Cookies.get('ytshow') === 'undefined') {
+        Cookies.set('ytshow', '0', {
+            expires: 365,
+            path: '/'
+        })
+    };
+    if (typeof Cookies.get('3dshow') === 'undefined') {
+        Cookies.set('3dshow', '0', {
+            expires: 365,
+            path: '/'
+        })
+    };
+    if (typeof Cookies.get('sanscount') === 'undefined') {
+        Cookies.set('sanscount', '1', {
+            expires: 365,
+            path: '/'
+        })
+    };
+    if (typeof Cookies.get('eq1') === 'undefined') {
+        Cookies.set('eq1', 0, {
+            expires: 365,
+            path: '/'
+        });
+    }
+    if (typeof Cookies.get('source1') === 'undefined') {
+        Cookies.set('source1', 0, {
+            expires: 365,
+            path: '/'
+        });
+    }
+    if (typeof Cookies.get('rs1') === 'undefined') {
+        Cookies.set('rs1', 0, {
+            expires: 365,
+            path: '/'
+        });
+    }
 
-    jQuery.cookie('connected', 0, {
-        expires: 365,
-        path: '/'
-    });
-
-    if (typeof $.cookie('gs1') === 'undefined') {
-        jQuery.cookie('gs1', 0, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('gs2') === 'undefined') {
-        jQuery.cookie('gs2', 1, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('ytshow') === 'undefined') {
-        jQuery.cookie('ytshow', 0, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('3dshow') === 'undefined') {
-        jQuery.cookie('3dshow', 0, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('sanscount') === 'undefined') {
-        jQuery.cookie('sanscount', 1, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('eq1') === 'undefined') {
-        jQuery.cookie('eq1', 0, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('source1') === 'undefined') {
-        jQuery.cookie('source1', 0, {
-            expires: 365,
-            path: '/'
-        });
-    }
-    if (typeof $.cookie('rs1') === 'undefined') {
-        jQuery.cookie('rs1', 0, {
-            expires: 365,
-            path: '/'
-        });
-    }
-
-    jQuery.cookie('spotlogin', 0);
-    jQuery.cookie('spotload', 0);
-    jQuery.cookie('setvalue', 0, {
+    Cookies.set('spotlogin', 0);
+    Cookies.set('spotload', 0);
+    Cookies.set('setvalue', 0, {
         expires: 365,
         path: '/'
     });
@@ -244,7 +244,7 @@ $(document).ready(function () {
 });
 
 $("#r1").click(function () {
-    jQuery.cookie('rs1', 0, {
+    Cookies.set('rs1', 0, {
         expires: 365,
         path: '/'
     });
@@ -255,7 +255,7 @@ $("#r1").click(function () {
 });
 
 $("#r2").click(function () {
-    jQuery.cookie('rs1', 1, {
+    Cookies.set('rs1', 1, {
         expires: 365,
         path: '/'
     });
@@ -266,7 +266,7 @@ $("#r2").click(function () {
 });
 
 $("#h1").click(function () {
-    jQuery.cookie('gs1', 0, {
+    Cookies.set('gs1', 0, {
         expires: 365,
         path: '/'
     });
@@ -277,7 +277,7 @@ $("#h1").click(function () {
 });
 
 $("#h2").click(function () {
-    jQuery.cookie('gs1', 1, {
+    Cookies.set('gs1', 1, {
         expires: 365,
         path: '/'
     });
@@ -289,7 +289,7 @@ $("#h2").click(function () {
 
 $("#u1").click(function () {
     colorchangetext.innerHTML = ("EQ color (HSL):");
-    jQuery.cookie('gs2', 0, {
+    Cookies.set('gs2', 0, {
         expires: 365,
         path: '/'
     });
@@ -301,7 +301,7 @@ $("#u1").click(function () {
 
 $("#u2").click(function () {
     colorchangetext.innerHTML = ("EQ &amp; UI color (HSL):");
-    jQuery.cookie('gs2', 1, {
+    Cookies.set('gs2', 1, {
         expires: 365,
         path: '/'
     });
@@ -312,7 +312,7 @@ $("#u2").click(function () {
 });
 
 $("#nintendo3d1").click(function () {
-    jQuery.cookie('3dshow', 0, {
+    Cookies.set('3dshow', 0, {
         expires: 365,
         path: '/'
     });
@@ -323,7 +323,7 @@ $("#nintendo3d1").click(function () {
 });
 
 $("#nintendo3d2").click(function () {
-    jQuery.cookie('3dshow', 1, {
+    Cookies.set('3dshow', 1, {
         expires: 365,
         path: '/'
     });
@@ -334,7 +334,7 @@ $("#nintendo3d2").click(function () {
 });
 
 $("#eqbutton2").click(function () {
-    jQuery.cookie('eq1', 0, {
+    Cookies.set('eq1', 0, {
         expires: 365,
         path: '/'
     });
@@ -343,7 +343,7 @@ $("#eqbutton2").click(function () {
 });
 
 $("#eqbutton1").click(function () {
-    jQuery.cookie('eq1', 1, {
+    Cookies.set('eq1', 1, {
         expires: 365,
         path: '/'
     });
@@ -352,7 +352,7 @@ $("#eqbutton1").click(function () {
 });
 
 $("#keybutton1").click(function () {
-    jQuery.cookie('key1', 0, {
+    Cookies.set('key1', 0, {
         expires: 365,
         path: '/'
     });
@@ -361,7 +361,7 @@ $("#keybutton1").click(function () {
 });
 
 $("#keybutton2").click(function () {
-    jQuery.cookie('key1', 1, {
+    Cookies.set('key1', 1, {
         expires: 365,
         path: '/'
     });
@@ -370,63 +370,63 @@ $("#keybutton2").click(function () {
 });
 
 $("#sansbutton0").click(function () {
-    jQuery.cookie('sans1', 0, {
+    Cookies.set('sans1', 0, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton1").click(function () {
-    jQuery.cookie('sans1', 1, {
+    Cookies.set('sans1', 1, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton2").click(function () {
-    jQuery.cookie('sans1', 2, {
+    Cookies.set('sans1', 2, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton3").click(function () {
-    jQuery.cookie('sans1', 3, {
+    Cookies.set('sans1', 3, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton4").click(function () {
-    jQuery.cookie('sans1', 4, {
+    Cookies.set('sans1', 4, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton5").click(function () {
-    jQuery.cookie('sans1', 5, {
+    Cookies.set('sans1', 5, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#filebutton").click(function () {
-    jQuery.cookie('sans1', 6, {
+    Cookies.set('sans1', 6, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton6").click(function () {
-    jQuery.cookie('sans1', 8, {
+    Cookies.set('sans1', 8, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#sansbutton7").click(function () {
-    jQuery.cookie('sans1', 9, {
+    Cookies.set('sans1', 9, {
         expires: 365,
         path: '/'
     });
@@ -434,27 +434,27 @@ $("#sansbutton7").click(function () {
 
 
 $("#sansbutton8").click(function () {
-    jQuery.cookie('sans1', 10, {
+    Cookies.set('sans1', 10, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#content1").click(function () {
-    jQuery.cookie('ytshow', 0, {
+    Cookies.set('ytshow', 0, {
         expires: 365,
         path: '/'
     });
     $("#masterplayer").removeClass("show");
     ytoff();
-    jQuery.cookie('source1', 1, {
+    Cookies.set('source1', 1, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#content2").click(function () {
-    var ytvalue = $.cookie("ytshow");
+    var ytvalue = Cookies("ytshow");
     if (ytvalue == 1) {
         $("#masterplayer").addClass("show");
         yton();
@@ -464,24 +464,24 @@ $("#content2").click(function () {
         $("#masterplayer").removeClass("show");
         ytoff();
     }
-    jQuery.cookie('source1', 2, {
+    Cookies.set('source1', 2, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#content3").click(function () {
-    jQuery.cookie('ytshow', 0);
+    Cookies.set('ytshow', 0);
     $("#masterplayer").removeClass("show");
     ytoff();
-    jQuery.cookie('source1', 3, {
+    Cookies.set('source1', 3, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#content4").click(function () {
-    var ytvalue = $.cookie("ytshow");
+    var ytvalue = Cookies("ytshow");
     if (ytvalue == 1) {
         $("#masterplayer").addClass("show");
         yton();
@@ -491,27 +491,27 @@ $("#content4").click(function () {
         $("#masterplayer").removeClass("show");
         ytoff();
     }
-    jQuery.cookie('source1', 4, {
+    Cookies.set('source1', 4, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#content5").click(function () {
-    jQuery.cookie('ytshow', 0, {
+    Cookies.set('ytshow', 0, {
         expires: 365,
         path: '/'
     });
     $("#masterplayer").removeClass("show");
     ytoff();
-    jQuery.cookie('source1', 5, {
+    Cookies.set('source1', 5, {
         expires: 365,
         path: '/'
     });
 });
 
 $("#ytbutton1").click(function () {
-    jQuery.cookie('ytshow', 1, {
+    Cookies.set('ytshow', 1, {
         expires: 365,
         path: '/'
     });
@@ -520,7 +520,7 @@ $("#ytbutton1").click(function () {
 });
 
 $("#ytbutton2").click(function () {
-    jQuery.cookie('ytshow', 2, {
+    Cookies.set('ytshow', 2, {
         expires: 365,
         path: '/'
     });
@@ -529,7 +529,7 @@ $("#ytbutton2").click(function () {
 });
 
 $("#ytbutton11").click(function () {
-    jQuery.cookie('ytshow', 1, {
+    Cookies.set('ytshow', 1, {
         expires: 365,
         path: '/'
     });
@@ -538,7 +538,7 @@ $("#ytbutton11").click(function () {
 });
 
 $("#ytbutton22").click(function () {
-    jQuery.cookie('ytshow', 2, {
+    Cookies.set('ytshow', 2, {
         expires: 365,
         path: '/'
     });

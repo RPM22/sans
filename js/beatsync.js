@@ -78,7 +78,7 @@ $(window).keydown((function (e) {
 
     return function (e) {
         if (e.which == 66) {
-            var startvar = $.cookie("start1");
+            var startvar = Cookies.get("start1");
             if (startvar == 1) {
                 if (turnedTheFuckOn == 0) {
                     beatStart();

@@ -51,7 +51,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://cdn.rti.llc/jslib/cookie/jquery.cookie.js"></script>
+    <script src="https://cdn.rti.llc/jslib/js.cookie.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
 </head>
 
@@ -92,9 +92,9 @@
     accessToken = accessToken.substring(0, n != -1 ? n : accessToken.length);
     accessToken = accessToken.substring(accessToken.indexOf("=") + 1);
 
-    jQuery.cookie('spottoken', accessToken);
-    jQuery.cookie('spotlogin', 1);
-    jQuery.cookie('spotload', 1);
+    Cookies.('spottoken', accessToken);
+    Cookies.('spotlogin', 1);
+    Cookies.('spotload', 1);
 
     console.log('test');
 

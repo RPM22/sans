@@ -28,7 +28,7 @@
 
 .ul {
     text-decoration: underline;
-    
+
 }
 
 html {
@@ -46,11 +46,13 @@ html {
     left: 0;
     right: 0;
     padding: 15px;
-    width: calc(95vw - 30px);
-    border-radius: 20px;
+    width: calc(95vw - 50px);
+    max-width: 550px;
+    border-radius: 10px;
     position: absolute;
     z-index: 9999999;
     display: none;
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
 }
 
 #warning.close {
@@ -62,14 +64,18 @@ html {
 
 #wx {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     right: 15px;
     top: 15px;
     background-image: url(https://cdn.rti.llc/gear2.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#wx:hover {
+    transform: rotate(90deg);
 }
 
 div {
@@ -1258,6 +1264,10 @@ input {
     margin: 0px;
     animation: glow 3s ease infinite alternate;
     font-weight: 400;
+}
+
+#text span {
+    text-decoration: line-through;
 }
 
 #text1 {
